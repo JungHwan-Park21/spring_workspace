@@ -19,13 +19,18 @@ public class JDBCTest {
 			e.printStackTrace();
 		}
 	}
+//	@Test
+//	public void tsetConnection() {
+//			try(Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","ora_user","hong")){
+//			System.out.println("sussandkase");
+//			Log.info(con);
+//		}catch(Exception e) {
+//			fail(e.getMessage());
+//		}
+//	}
 	@Test
-	public void tsetConnection() {
-			try(Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","oracle")){
-			System.out.println("sussandkase");
-			Log.info(con);
-		}catch(Exception e) {
-			fail(e.getMessage());
-		}
+	public void testGetTiom2() {
+		log.info("getTime2");
+		log.info(timeMapper.getTime2());
 	}
 }
