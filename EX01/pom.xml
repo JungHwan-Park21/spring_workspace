@@ -153,6 +153,14 @@
 		    <version>${org.springframework-version}</version>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+	<dependency>
+    	<groupId>org.springframework</groupId>
+	    <artifactId>spring-test</artifactId>
+	    <version>5.3.7</version>
+	    <scope>${org.springframework-version}</</scope>
+	</dependency>
+			
 		
 				
 		   

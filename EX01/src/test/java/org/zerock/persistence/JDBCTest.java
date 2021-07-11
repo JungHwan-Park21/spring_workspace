@@ -1,17 +1,20 @@
 package org.zerock.persistence;
 
-import static org.junit.Assert.fail;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.zerock.mapper.TimeMapper;
 
-import jdk.internal.org.jline.utils.Log;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
+@RunWith(SpringRunner.class)
+@ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
 public class JDBCTest {
+	
+	@Setter(onMethod_ = @Autowired)
+	private TimeMapper timeMapper;
+	
 	static {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
