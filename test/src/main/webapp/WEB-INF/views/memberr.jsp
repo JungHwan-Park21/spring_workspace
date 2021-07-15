@@ -4,18 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Join</title>
-<link href="/resources/css/style.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Insert title here</title>
 </head>
 <body>
-	<div id="join-wrap">
+
+<div id="join-wrap">
 		<header>
 			<a href="#" class="header-logo"><img src="https://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png"></a>
 		</header>
 		<div id="join-form">
 			
-			<form method="post" role="form">
+			<form method="post" name="frm">
 				<div class="input-wrap">
 					<h2>회원정보를 입력해주세요</h2>
 					<label class="input-container">
@@ -41,5 +40,6 @@
 			</form>
 		</div>		
 	</div>
+
 </body>
 </html>
