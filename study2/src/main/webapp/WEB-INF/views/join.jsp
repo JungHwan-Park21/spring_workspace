@@ -15,7 +15,7 @@
 		</header>
 		<div id="join-form">
 			
-			<form modelAttribute="user" action="/join" method="post" role="form">
+			<form action="/join" method="post" role="form">
 				<div class="input-wrap">
 					<h2>회원정보를 입력해주세요</h2>
 					<label class="input-container">
