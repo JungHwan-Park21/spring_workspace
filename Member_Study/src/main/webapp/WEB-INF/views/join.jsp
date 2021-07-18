@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,7 @@
 		</header>
 		<div id="join-form">
 			
-			<form method="post" role="form">
+			<form action="/join" method="post" role="form">
 				<div class="input-wrap">
 					<h2>회원정보를 입력해주세요</h2>
 					<label class="input-container">
