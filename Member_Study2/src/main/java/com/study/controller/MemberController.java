@@ -1,10 +1,15 @@
 package com.study.controller;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.study.domain.MemberVO;
 import com.study.service.MemberService;
@@ -23,8 +28,14 @@ public class MemberController {
 	public void joinGet() {}
 	
 	@PostMapping("/join")
-	public String joinPost(MemberVO vo, RedirectAttributes rttr) {
-		log.info(vo);
+	public String joinPost(@Valid MemberVO vo, BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			List<ObjectError> errors = bindingResult.getAllErrors();
+			for(ObjectError error:errors) {
+				System.out.println(error);
+			}
+			return "join";
+		}
 		service.insertMember(vo);
 		return "redirect:/joinmember";
 	}
