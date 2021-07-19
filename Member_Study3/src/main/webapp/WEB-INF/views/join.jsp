@@ -22,7 +22,7 @@
 		</header>
 		<div id="join-form">
 			
-			<form action="${pageContext.servletContext.contextPath }/user/join" method="post" role="form">
+			<form action="${pageContext.servletContext.contextPath }/user/join" method="post" role="form" modelAttribute="MemberVO">
 				<div class="input-wrap">
 					<h2>회원정보를 입력해주세요</h2>
 					<label class="input-container">
@@ -36,11 +36,8 @@
 					<label class="input-container">
 						<span class="icon"><i class="fa fa-user-o"></i></span>
 						<input type="text" name="mem_name" placeholder="이름" class="input-field input-name" maxlength="40" onfocus="this.placeholder = ''" onblur="this.placeholder = '이름'">
-						<spring:hasBindErrors name="MemberVO">
-						    <c:if test="${errors.hasFieldErrors('name') }">                                     
-						    	<strong>${errors.getFieldError( 'name' ).defaultMessage }</strong>
-							</c:if>
-						</spring:hasBindErrors>
+						<form:errors path="mem_name" />
+						
 					</label>
 					<label class="input-container">
 						<span class="icon"><i class="fa fa-mobile"></i></span>
