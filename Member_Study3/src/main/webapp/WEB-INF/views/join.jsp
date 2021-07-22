@@ -34,22 +34,22 @@
 							<label class="input-container">
 							<span class="icon"><i class="fa fa-envelope-o"></i></span>
 					         <form:input path="mem_id"  placeholder="아이디(이메일)" class="input-field input-userid" maxlength="80" onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디(이메일)'" />
-					         <form:errors path="mem_id" />
+					         <form:errors path="mem_id" style="color:Tomato;"  />
 					         </label>
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-lock"></i></span>
 					         <form:password path="mem_pw" placeholder="비밀번호" class="input-field input-pwd" maxlength="20" onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호'" />
-					         <form:errors path="mem_pw" />
+					         <form:errors path="mem_pw" style="color:Tomato;" />
 					         </label>
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-user-o"></i></span>
 					         <form:password path="mem_name" placeholder="이름" class="input-field input-name" maxlength="40" onfocus="this.placeholder = ''" onblur="this.placeholder = '이름'"/>
-					         <form:errors path="mem_name" />
+					         <form:errors path="mem_name" style="color:Tomato;" />
 					         </label>
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-mobile"></i></span>
 					         <form:password path="mem_phone" placeholder="휴대폰번호" class="input-field input-phone" maxlength="40" onfocus="this.placeholder = ''" onblur="this.placeholder = '휴대폰번호'"/>
-					         <form:errors path="mem_phone" />
+					         <form:errors path="mem_phone" style="color:Tomato;" />
 					         </label>
 			         </div>
 						         <input type="submit" value="동의하고 가입하기" class="join-btn">	
