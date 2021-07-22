@@ -39,7 +39,7 @@
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-lock"></i></span>
 					         <form:password path="mem_pw" placeholder="비밀번호" class="input-field input-pwd" maxlength="20" onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호'" />
-					         <form:errors path="mem_pw" style="color:Tomato;" />
+					         <form:errors path="mem_pw"  />
 					         </label>
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-user-o"></i></span>

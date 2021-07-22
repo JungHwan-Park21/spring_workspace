@@ -22,6 +22,6 @@ public class MemberVO {
 	@NotEmpty(message="이름을 정확히 입력하세요.")
 	private String mem_name;
 	
-	@NotEmpty(message="휴대폰 번호를 정확히 입력하세요.")
+	@Pattern(message="휴대폰 번호를 정확히 입력하세요.", regexp = "^01(?:0|1|[6-9]) - (?:\\d{3}|\\d{4}) - \\d{4}$")
 	private String mem_phone;
 }
