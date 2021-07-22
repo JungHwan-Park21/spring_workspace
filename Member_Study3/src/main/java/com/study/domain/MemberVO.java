@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class MemberVO {
 	
-	@NotEmpty
+	@NotEmpty(message="이메일을 입력하세요.")
 	  @Email
 	private String mem_id;
 	
@@ -19,10 +19,9 @@ public class MemberVO {
 	  @Pattern(regexp="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=])(?=\\S+$).{8,}")
 	private String mem_pw;
 	
-	@NotEmpty
-	  @Length(min=2, max=5)
+	@NotEmpty(message="이름을 정확히 입력하세요.")
 	private String mem_name;
 	
-	@NotEmpty
+	@NotEmpty(message="휴대폰 번호를 정확히 입력하세요.")
 	private String mem_phone;
 }
