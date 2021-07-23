@@ -49,4 +49,18 @@ public class MemberController {
 	
 	@GetMapping("/joinmember")
 	public void joinmember() {}
+	
+	@GetMapping("/all")
+	public void doAll() {}
+	
+	@GetMapping("/member")
+	public void doMember() {}
+	
+	@GetMapping("/admin")
+	public void doAdmin() {}
+	
+	
 }
+
+
+
