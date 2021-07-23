@@ -12,7 +12,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.study.domain.MemberVO;
 import com.study.service.MemberService;
@@ -47,17 +47,6 @@ public class MemberController {
 		return "redirect:/joinmember";
 	}
 	
-	@GetMapping("/joinmember")
-	public void joinmember() {}
-	
-	@GetMapping("/all")
-	public void doAll() {}
-	
-	@GetMapping("/member")
-	public void doMember() {}
-	
-	@GetMapping("/admin")
-	public void doAdmin() {}
 	
 	
 }
