@@ -23,7 +23,7 @@
 			         method="POST"
 			         action="/join">
 			         <div class="input-wrap">
-						<h2>회원정보를 입력해주세요</h2>
+						<h2>회원정보를 입력해주세요.</h2>
 							<label class="input-container">
 							<span class="icon"><i class="fa fa-envelope-o"></i></span>
 					         <form:input path="mem_id"  placeholder="아이디(이메일)" class="input-field input-userid" maxlength="80" onfocus="this.placeholder = ''" onblur="this.placeholder = '아이디(이메일)'" />
@@ -42,6 +42,8 @@
 					         <label class="input-container">
 						<span class="icon"><i class="fa fa-mobile"></i></span>
 					         <form:password path="mem_phone" placeholder="휴대폰번호" class="input-field input-phone" maxlength="40" onfocus="this.placeholder = ''" onblur="this.placeholder = '휴대폰번호'"/>
+					 
+					 
 					         <form:errors path="mem_phone" style="color:Tomato;" />
 					         </label>
 			         </div>
