@@ -203,7 +203,7 @@
 		    <version>2.8.2</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver. -->
 		<dependency>
 		    <groupId>org.aspectj</groupId>
 		    <artifactId>aspectjweaver</artifactId>
