@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.study.controll">
+	<logger name="com.Moviemoving.controller">
 		<level value="info" />
 	</logger>
 	
