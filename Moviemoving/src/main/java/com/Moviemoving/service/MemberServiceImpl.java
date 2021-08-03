@@ -23,10 +23,4 @@ public class MemberServiceImpl implements MemberService {
 		
 	}
 
-	@Override
-	public int idCheck(String user_id) throws Exception {
-		
-		return Membermapper.idCheck(User_id);
-	}
-	
 }
