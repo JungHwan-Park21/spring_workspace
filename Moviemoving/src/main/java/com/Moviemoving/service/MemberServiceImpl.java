@@ -22,5 +22,11 @@ public class MemberServiceImpl implements MemberService {
 		mapper.insertMember(vo);
 		
 	}
+
+	@Override
+	public int idCheck(String user_id) throws Exception {
+		
+		return Membermapper.idCheck(User_id);
+	}
 	
 }
