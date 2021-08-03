@@ -21,8 +21,8 @@
 			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
 		
 		<!--  아이디 비번 확인!!!!!!!!!!!!!!!!! -->
-		<property name="username" value="MOVIEMOVING"></property>
-		<property name="password" value="TIS00"></property>
+		<property name="username" value="ora_user"></property>
+		<property name="password" value="hong"></property>
 
 	</bean>
 
