@@ -6,14 +6,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입</title>
 </head>
 <body>
 	
 		<form:form 
 			         modelAttribute="memberVO"
 			         method="POST"
-			         action="/Member">
+			         action="/join">
 			         <div class="input-wrap">
 						<h2>회원정보를 입력해주세요.</h2>
 							<label class="input-container">
