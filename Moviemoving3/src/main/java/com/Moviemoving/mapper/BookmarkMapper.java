@@ -5,5 +5,5 @@ import java.util.List;
 import com.Moviemoving.domain.BookmarkVO;
 
 public interface BookmarkMapper {
-	public List<BookmarkVO>getList();
+	public void getList(BookmarkVO vo);
 }

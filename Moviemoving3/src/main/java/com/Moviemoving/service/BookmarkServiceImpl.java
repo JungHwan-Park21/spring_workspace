@@ -1,25 +1,26 @@
 package com.Moviemoving.service;
 
-import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Moviemoving.domain.BookmarkVO;
+import com.Moviemoving.mapper.BookmarkMapper;
+
+import lombok.Setter;
 
 @Service
 public class BookmarkServiceImpl implements BookmarkService {
-
+	
+	
+	
+	@Setter(onMethod_ = @Autowired)
+	private BookmarkMapper mapper;
+	
 	@Override
-	public BookmarkVO get(Long bno) {
-		// TODO Auto-generated method stub
-		return null;
+	public void getList(BookmarkVO vo) {
+		mapper.getList(vo);
+		
 	}
 
-	@Override
-	public List<BookmarkVO> getList() {
-		// mapper 에 정의된 메서드 호출
-		mapper.getList();
-		return null;
-	}
-
+	
 }
