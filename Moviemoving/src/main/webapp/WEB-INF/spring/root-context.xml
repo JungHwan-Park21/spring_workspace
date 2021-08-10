@@ -19,42 +19,40 @@
 			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="jdbcUrl"
 			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
-		
-		<!--  아이디 비번 확인!!!!!!!!!!!!!!!!! -->
 		<property name="username" value="MOVIEMOVING"></property>
 		<property name="password" value="TIS00"></property>
 
-		</bean>
+	</bean>
+
+	<!-- HikariCP configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
 	
-		<!-- HikariCP configuration -->
-		<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
-			destroy-method="close">
-			<constructor-arg ref="hikariConfig" />
-		</bean>
-		
-		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
-			<property name="dataSource" ref="dataSource"></property> 	
-		</bean>
-		
-		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-			<property name="dataSource" ref="dataSource"></property>
-		</bean>
-		
-		<tx:annotation-driven />
-		
-		<task:annotation-driven/>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource"></property> 	
+	</bean>
 	
-		<bean id="sqlSession"
-			class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
-			<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
-		</bean>	
-		
-		<mybatis-spring:scan base-package="com.Moviemoving.mapper" />
-		<context:component-scan base-package="com.Moviemoving.service"></context:component-scan>
-		<context:component-scan base-package="com.Moviemoving.persistence"></context:component-scan>
-		<context:component-scan base-package="com.Moviemoving.aop"></context:component-scan>
-		<context:component-scan base-package="com.Moviemoving.task"></context:component-scan>
-		
-		<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-		
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<tx:annotation-driven />
+	
+	<task:annotation-driven/>
+
+	<bean id="sqlSession"
+		class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
+	</bean>	
+	
+	<mybatis-spring:scan base-package="com.Moviemoving.mapper" />
+	<context:component-scan base-package="com.Moviemoving.service"></context:component-scan>
+	<context:component-scan base-package="com.Moviemoving.persistence"></context:component-scan>
+	<context:component-scan base-package="com.Moviemoving.aop"></context:component-scan>
+	<context:component-scan base-package="com.Moviemoving.task"></context:component-scan>
+	
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
 </beans>
