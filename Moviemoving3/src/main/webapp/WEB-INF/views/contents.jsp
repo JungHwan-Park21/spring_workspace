@@ -21,7 +21,7 @@
                             <div class="btn active" id="bookmark-btn">
                                 <i class="fa fa-bookmark-o disp-block"></i>
                                 <i class="fa fa-bookmark disp-none"></i>
-                                <span>보고싶어요</span>
+                                <button id="Bookmark">보고싶어요</button>
                             </div>
                             <div class="btn" id="review-btn">
                                 <i class="fa fa-star-o disp-block"></i>
