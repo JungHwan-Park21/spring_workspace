@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@include file="includes/header.jsp" %>
 
  <!--- 서브컨텐츠 시작 ----------->
@@ -13,9 +15,13 @@
                 <div class="summary-info-wrap">
                     <div class="summary-info">
                         <div class="title">
-                            <h2>모가디슈</h2>
-                            <span>2021</span>
-                            <span class="left-line-gray">드라마, 액션</span>
+                            <h2><c:out value="${movie.movieInfo_title}"/></h2>
+                            <span><c:out value="${movie.movieInfo_year}"/></span>
+                            <span class="left-line-gray cateList">
+                            <c:forEach items="${cateList}" var="cateList">
+                            	<c:out value="${cateList.categoryList_name}"/><strong>,</strong>
+                            </c:forEach>
+                            </span>
                         </div>
                         <div class="info-btn">
                             <div class="btn active" id="bookmark-btn">
@@ -32,14 +38,20 @@
                         <div class="go-site">
                             <p class="title">감상 가능한 곳</p>
                             <div class="btn-wrap">
-                                <a id="go-netflix" class="goBtn" href="#"></a>
-                                <a id="go-watcha" class="goBtn" href="#"></a>
-                                <a id="go-wavve" class="goBtn" href="#"></a>
+                           		<c:if test="${movie.movieInfo_netflix != null}">
+                           			<a id="go-netflix" class="goBtn" href="<c:out value='${movie.movieInfo_netflix}'/>" target="_blank"></a>
+                           		</c:if>
+                           		<c:if test="${movie.movieInfo_watcha != null}">
+                           			<a id="go-watcha" class="goBtn" href="<c:out value='${movie.movieInfo_watcha}'/>" target="_blank"></a>
+                           		</c:if>
+                           		<c:if test="${movie.movieInfo_wavve != null}">
+                           			<a id="go-wavve" class="goBtn" href="<c:out value='${movie.movieInfo_wavve}'/>" target="_blank"></a>
+                           		</c:if>
                             </div>
                         </div>
                     </div>
                     <div class="poster-img">
-                        <img src="/resources/images/poster.png">
+                        <img src="${movie.movieInfo_img}">
                     </div>
                 </div>
             </section>
@@ -47,16 +59,15 @@
             <section class="vedio-info-con">
                 <dl class="text">
                     <dt>연령 등급</dt>
-                    <dd>15세이상관람가 </dd>
+                    <dd><c:out value="${movie.movieInfo_age}" /></dd>
                     <dt>장르</dt>
                     <dd>드라마, 액션</dd>
                     <dt>재생시간</dt>
-                    <dd>2시간 10분</dd>
+                    <dd><c:out value="${movie.movieInfo_rt}" /></dd>
                 </dl>
                 <dl class="plot">
                     <dt>내용</dt>
-                    <dd>내전으로 고립된 낯선 도시, 모가디슈 지금부터 우리의 목표는 오로지 생존이다!<br>
-                        대한민국이 UN가입을 위해 동분서주하던 시기 1991년 소말리아의 수도 모가디슈에서는 일촉즉발의 내전이 일어난다. 통신마저 끊긴 그 곳에 고립된 대한민국 대사관의 직원과 가족들은 총알과 포탄이 빗발치는 가운데, 살아남기 위해 하루하루를 버텨낸다. 그러던 어느 날 밤, 북한 대사관의 일행들이 도움을 요청하며 문을 두드리는데… 목표는 하나, 모가디슈에서 탈출해야 한다!</dd>
+                    <dd><c:out value="${movie.movieInfo_con}" /></dd>
                 </dl>
             </section>
 
@@ -249,6 +260,5 @@
         </div>
         <!-- //평가하기팝업-작성 끝 ----------->
         <!-- //서브컨텐츠 끝 ----------->
-
 
 <%@include file="includes/footer.jsp" %>

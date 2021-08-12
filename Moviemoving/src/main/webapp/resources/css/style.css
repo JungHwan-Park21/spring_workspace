@@ -212,6 +212,20 @@ footer p {color:#AFAFAF; width:1200px; margin:0 auto; font-size: 15px; text-alig
 .sitebest-title h2 {color:#242424; font-size: 35px; font-weight: normal; letter-spacing: -1px;}
 .sitebest-title h2 strong {font-weight: 600;}
 
+.vedio-list .moviePlot {
+	position:absolute; 
+	width:100%; 
+	height:100%; 
+	top:0; left:0; bottom:0; right:0; 
+	background: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 70px 20px 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    display:none;
+}
+
 .vedio-list ul {
     display: flex;
     align-items: flex-start;
@@ -224,6 +238,7 @@ footer p {color:#AFAFAF; width:1200px; margin:0 auto; font-size: 15px; text-alig
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #e4e4e4;
+    position:relative;
 }
 .sitebest-tag {
     position:absolute; 
@@ -239,6 +254,7 @@ footer p {color:#AFAFAF; width:1200px; margin:0 auto; font-size: 15px; text-alig
     font-size: 35px;
     font-family: 'Lobster', cursive;
     box-shadow:2px 3px 8px rgb(0 0 0 / 50%);
+    z-index: 10;
 }
 .sitebest-watcha .sitebest-tag {background:#FF0559;}
 .sitebest-wavve .sitebest-tag {background:#0652DA;}
@@ -290,13 +306,16 @@ footer p {color:#AFAFAF; width:1200px; margin:0 auto; font-size: 15px; text-alig
 
 .summary-info-wrap .poster-img {
     width:305px;
-    height:438px;
+    height:430px;
     border-radius: 10px;
     overflow: hidden;
     position: absolute;
     right:0;
     bottom:0;
 }
+
+.summary-info-wrap .cateList strong {font-weight: normal;}
+.summary-info-wrap .cateList strong:last-child {display:none;}
 
 /** 영화info **/
 .vedio-info-con {

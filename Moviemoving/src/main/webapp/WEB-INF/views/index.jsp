@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <%@include file="includes/header.jsp" %>
 
 <!--- 메인컨텐츠 시작 ----------->
@@ -152,66 +154,23 @@
                     </h2>
                 </div>
                 <ul>
+                <c:forEach items="${netflix}" var="netflix" varStatus="status">                	
                     <li>
-                        <span class="sitebest-tag">1</span>
+                        <span class="sitebest-tag"><c:out value="${status.count}"/></span>
                         <div class="list-img">
-                            <img src="/resources/images/exListimg01.png">
+                            <img src="<c:out value='${netflix.movieInfo_img}'/>">
+                            <p class="moviePlot">
+                            	<c:out value='${netflix.movieInfo_con}'/>
+                            </p>
                         </div>
                         <div class="list-title">
-                            <span class="title">킹덤 : 아신전</span>
-                            <span>2021</span>
+                            <span class="title"><c:out value="${netflix.movieInfo_title}"></c:out></span>
+                            <span><c:out value="${netflix.movieInfo_year}"></c:out></span>
                             <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
-                        <a href="#" class="box-a"></a>
+                        <a href="/movie?MovieInfo_no=<c:out value='${netflix.movieInfo_no}'/>" class="box-a move"></a>
                     </li>
-                    <li>
-                        <span class="sitebest-tag">2</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg02.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">블러드 레드 스카이</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">3</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg03.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">이스케이프룸</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">4</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg04.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">지오스톰</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">5</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg05.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">보스 베이비</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
+                </c:forEach>
                 </ul>
             </section>
             <section class="sitebest-watcha vedio-list">
@@ -222,66 +181,23 @@
                     </h2>
                 </div>
                 <ul>
+                <c:forEach items="${watcha}" var="watcha" varStatus="status">
                     <li>
-                        <span class="sitebest-tag">1</span>
+                        <span class="sitebest-tag"><c:out value="${status.count}"/></span>
                         <div class="list-img">
-                            <img src="/resources/images/exListimg01.png">
+                            <img src="<c:out value='${watcha.movieInfo_img}'/>">
+                            <p class="moviePlot">
+                            	<c:out value='${watcha.movieInfo_con}'/>
+                            </p>
                         </div>
                         <div class="list-title">
-                            <span class="title">킹덤 : 아신전</span>
-                            <span>2021</span>
+                            <span class="title"><c:out value="${watcha.movieInfo_title}"></c:out></span>
+                            <span><c:out value="${watcha.movieInfo_year}"></c:out></span>
                             <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
-                        <a href="#" class="box-a"></a>
+                        <a href="/movie?MovieInfo_no=<c:out value='${watcha.movieInfo_no}'/>" class="box-a move"></a>
                     </li>
-                    <li>
-                        <span class="sitebest-tag">2</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg02.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">블러드 레드 스카이</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">3</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg03.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">이스케이프룸</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">4</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg04.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">지오스톰</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">5</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg05.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">보스 베이비</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
+                </c:forEach>
                 </ul>
             </section>
             <section class="sitebest-wavve vedio-list">
@@ -292,71 +208,26 @@
                     </h2>
                 </div>
                 <ul>
+                <c:forEach items="${wavve}" var="wavve" varStatus="status">
                     <li>
-                        <span class="sitebest-tag">1</span>
+                        <span class="sitebest-tag"><c:out value="${status.count}"/></span>
                         <div class="list-img">
-                            <img src="/resources/images/exListimg01.png">
+                            <img src="<c:out value='${wavve.movieInfo_img}'/>">
+                            <p class="moviePlot">
+                            	<c:out value='${wavve.movieInfo_con}'/>
+                            </p>
                         </div>
                         <div class="list-title">
-                            <span class="title">킹덤 : 아신전</span>
-                            <span>2021</span>
+                            <span class="title"><c:out value="${wavve.movieInfo_title}"></c:out></span>
+                            <span><c:out value="${wavve.movieInfo_year}"></c:out></span>
                             <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
-                        <a href="#" class="box-a"></a>
+                        <a href="/movie?MovieInfo_no=<c:out value='${wavve.movieInfo_no}'/>" class="box-a move"></a>
                     </li>
-                    <li>
-                        <span class="sitebest-tag">2</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg02.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">블러드 레드 스카이</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">3</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg03.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">이스케이프룸</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">4</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg04.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">지오스톰</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
-                    <li>
-                        <span class="sitebest-tag">5</span>
-                        <div class="list-img">
-                            <img src="/resources/images/exListimg05.png">
-                        </div>
-                        <div class="list-title">
-                            <span class="title">보스 베이비</span>
-                            <span>2021</span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                        </div>
-                        <a href="#" class="box-a"></a>
-                    </li>
+                 </c:forEach>                    
                 </ul>
             </section>
         </div>
-        <!-- //메인컨텐츠 끝 ----------->
-        
-        
+        <!-- //메인컨텐츠 끝 ----------->       
 
 <%@include file="includes/footer.jsp" %>
