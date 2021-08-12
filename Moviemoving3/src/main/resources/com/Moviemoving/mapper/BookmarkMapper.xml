@@ -5,6 +5,9 @@
   
 <mapper namespace="com.Moviemoving.mapper.BookmarkMapper">
 	<select id="getList" resultType="com.Moviemoving.domain.BookmarkVO">
-	
+		select a.user_id, a.movieinfo_no, b.movieinfo_title, b.movieinfo_no, b.movieinfo_thum
+		from bookmark a,
+		    movieinfo b
+		where a.movieinfo_no = b.movieinfo_no
 	</select>
 </mapper>
