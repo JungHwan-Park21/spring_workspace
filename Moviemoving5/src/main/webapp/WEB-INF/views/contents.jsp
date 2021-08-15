@@ -28,7 +28,9 @@
 	                            <div class="btn active" id="bookmark-btn">
 	                                <i class="fa fa-bookmark-o disp-block"></i>
 	                                <i class="fa fa-bookmark disp-none"></i>
-	                                <span>보고싶어요</span>
+	                                <input name="User_id" type="hidden" value="${ User.id }">
+            						<button type="submit" >보고싶어요</button>
+            					</div>
 	                        </div>
                         </form>
                             <div class="btn" id="review-btn">
