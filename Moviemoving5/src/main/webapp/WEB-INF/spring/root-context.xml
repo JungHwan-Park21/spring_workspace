@@ -55,9 +55,4 @@
 	
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	
-	<bean id="ReviewMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-    <property name="mapperInterface" value="com.Moviemoving.mapper.ReviewMapper" />
-    <property name="sqlSessionFactory" ref="sqlSessionFactory" />
-	</bean>
-	
 </beans>
