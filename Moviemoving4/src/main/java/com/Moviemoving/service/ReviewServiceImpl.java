@@ -1,5 +1,15 @@
 package com.Moviemoving.service;
 
-public interface ReviewServiceImpl {
+import java.util.List;
+
+import com.Moviemoving.domain.ReviewVO;
+
+public class ReviewServiceImpl implements ReviewService{
+
+	@Override
+	public List<ReviewVO> getList() {
+		
+		return null;
+	}
 
 }

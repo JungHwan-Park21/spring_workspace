@@ -227,8 +227,8 @@
                             <i class="fa fa-star-o"></i>
                         </span>
                     </div>
-                    <c:url var="reviewsPath" value="/reviews" />
-					<f:form modelAttribute="review" action="${ reviewsPath }" method="post">
+                    <c:url var="contentsPath" value="/contents" />
+					<f:form modelAttribute="contents" action="${ contentsPath }" method="post">
 					    <c:forEach var="error" items="${ fieldErrors }">
 					        <div class="alert alert-warning">
 					            <strong>${ error.getField() }</strong>: ${ error.getDefaultMessage() }

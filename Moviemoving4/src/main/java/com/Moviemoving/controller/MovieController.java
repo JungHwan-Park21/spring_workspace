@@ -42,4 +42,5 @@ public class MovieController {
 		log.info("리스트");
 		model.addAttribute("movieList", service.getList());
 	}
+
 }

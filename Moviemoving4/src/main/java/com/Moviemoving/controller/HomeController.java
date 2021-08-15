@@ -20,4 +20,7 @@ public class HomeController {
 	
 	@GetMapping("/search")
 	public void search() {}
+	
+	@GetMapping("/contents")
+	public void Review() {}
 }
