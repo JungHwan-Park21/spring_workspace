@@ -31,8 +31,8 @@ public class CartController {
 		@GetMapping("/")
 		public String getMovie (@RequestParam("User_id") int User_id, MovieVO titleimg, Model model) {
 			log.info("마이페이지");
-			model.addAttribute("cart", cart));
-			model.addAttribute("items", items));
+			model.addAttribute("cart", cart);
+			model.addAttribute("items", items);
 			return "mypage";
 		}	
 	

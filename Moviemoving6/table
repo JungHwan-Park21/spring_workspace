@@ -1,0 +1,199 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 목요일-8월-12-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table CATEGORY
+--------------------------------------------------------
+
+  CREATE TABLE "MOVIEMOVING"."CATEGORY" 
+   (	"CATEGORYLIST_NO" NUMBER, 
+	"MOVIEINFO_NO" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table CATEGORYLIST
+--------------------------------------------------------
+
+  CREATE TABLE "MOVIEMOVING"."CATEGORYLIST" 
+   (	"CATEGORYLIST_NO" NUMBER, 
+	"CATEGORYLIST_NAME" VARCHAR2(10 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MOVIEINFO
+--------------------------------------------------------
+
+  CREATE TABLE "MOVIEMOVING"."MOVIEINFO" 
+   (	"MOVIEINFO_NO" NUMBER, 
+	"MOVIEINFO_TITLE" VARCHAR2(50 BYTE), 
+	"MOVIEINFO_IMG" VARCHAR2(200 BYTE), 
+	"MOVIEINFO_VIDEO" VARCHAR2(1000 BYTE), 
+	"MOVIEINFO_AGE" VARCHAR2(10 BYTE), 
+	"MOVIEINFO_RT" VARCHAR2(10 BYTE), 
+	"MOVIEINFO_CON" VARCHAR2(500 BYTE), 
+	"MOVIEINFO_VISIT" NUMBER, 
+	"MOVIEINFO_WATCHA" VARCHAR2(200 BYTE), 
+	"MOVIEINFO_NETFLIX" VARCHAR2(200 BYTE), 
+	"MOVIEINFO_WAVVE" VARCHAR2(200 BYTE), 
+	"MOVIEINFO_GRADE" NUMBER, 
+	"MOVIEINFO_CODE" CHAR(1 BYTE), 
+	"MOVIEINFO_YEAR" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into MOVIEMOVING.CATEGORY
+SET DEFINE OFF;
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,1000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,1000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,1000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,1000004);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,2000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,2000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,2000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (1,2000004);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (2,1000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (2,2000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (3,1000004);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (3,2000004);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (8,1000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (8,1000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (8,2000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (8,2000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (9,1000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (9,1000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (9,2000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (9,2000002);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (11,1000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (11,2000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,1000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,1000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,1000004);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,2000001);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,2000003);
+Insert into MOVIEMOVING.CATEGORY (CATEGORYLIST_NO,MOVIEINFO_NO) values (16,2000004);
+REM INSERTING into MOVIEMOVING.CATEGORYLIST
+SET DEFINE OFF;
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (1,'액션');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (2,'드라마');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (3,'애니');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (4,'범죄');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (5,'코미디');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (6,'로맨스');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (7,'어벤쳐');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (8,'스릴러');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (9,'공포');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (10,'추리');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (11,'SF');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (12,'성인물');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (13,'전쟁');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (14,'사극');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (15,'가족');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (16,'판타지');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (17,'기타');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (18,'다큐');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (19,'공연');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (20,'뮤지컬');
+Insert into MOVIEMOVING.CATEGORYLIST (CATEGORYLIST_NO,CATEGORYLIST_NAME) values (21,'서부극');
+REM INSERTING into MOVIEMOVING.MOVIEINFO
+SET DEFINE OFF;
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000001,'킹덤:아신전_영화1','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,null,'https://www.netflix.com/kr/title/81312457',null,100,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000002,'블러드 레드 스카이_영화2','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/80198645',null,95,'0',1995);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000003,'어벤져스: 인피니티 워_영화3','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',90,'0',1994);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000004,'극장판 귀멸의 칼날_영화4','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',85,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000001,'킹덤:아신전_TV1','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457',null,85,'1',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000003,'어벤져스: 인피니티 워_TV4','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',95,'1',1990);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000004,'극장판 귀멸의 칼날_TV3','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'1',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000002,'블러드 레드 스카이_TV2','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,'https://www.netflix.com/kr/title/80198645',null,null,90,'1',1990);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000005,'킹덤:아신전_영화5','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,null,'https://www.netflix.com/kr/title/81312457',null,100,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000006,'블러드 레드 스카이_영화6','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/80198645',null,30,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000007,'어벤져스: 인피니티 워_영화7','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',30,'0',1995);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000008,'극장판 귀멸의 칼날_영화8','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000005,'킹덤:아신전_TV5','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457',null,50,'1',1998);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000007,'어벤져스: 인피니티 워_TV7','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',70,'1',2005);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000008,'극장판 귀멸의 칼날_TV8','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'1',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000009,'킹덤:아신전_영화9','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,null,'https://www.netflix.com/kr/title/81312457',null,100,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000010,'블러드 레드 스카이_영화10','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/80198645',null,30,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000011,'어벤져스: 인피니티 워_영화11','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',30,'0',1995);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000012,'극장판 귀멸의 칼날_영화12','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,null,null,'https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'0',2021);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000009,'킹덤:아신전_TV9','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457',null,50,'1',1998);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000011,'어벤져스: 인피니티 워_TV11','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',70,'1',2005);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000012,'극장판 귀멸의 칼날_TV12','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'1',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000010,'블러드 레드 스카이_TV10','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,'https://www.netflix.com/kr/title/80198645',null,null,100,'1',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (2000006,'블러드 레드 스카이_TV6','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,'https://www.netflix.com/kr/title/80198645',null,null,100,'1',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000013,'킹덤:아신전_영화13','https://images.justwatch.com/poster/247794970/s276/kingdom-ashin-of-the-north.webp','https://www.youtube.com/watch?v=rO3gF04G-2I','19세','1시간','비극과 배신이 삶을 덮친다. 기이하고 불길한 뭔가를 발견한다. 한순간에 가족과 동족을 잃은 여인. 오직 복수를 꿈꾸며 살아온 그녀가 짙은 어둠을 마주한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457',null,50,'0',1998);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000014,'블러드 레드 스카이_영화14','https://images.justwatch.com/poster/247509844/s276/beulreodeu-redeu-seukai.webp','https://youtu.be/7o_jKU9hpt8','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,'https://www.netflix.com/kr/title/80198645',null,null,100,'0',2001);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000015,'어벤져스: 인피니티 워_영화15','https://images.justwatch.com/poster/52392083/s276/eobenjyeoseu-inpiniti-weo.webp','https://youtu.be/xUDhdCsLkjU','19세','2시간','의문의 병을 앓는 여자. 치료를 위해 어린 아들과 대서양을 가르는 비행기에 오른다. 목적지까지 반쯤 왔을까. 비행기가 테러리스트들에게 점령당하고, 여인은 생존 싸움을 시작한다. 그간 어렵사리 숨겨온 어둠의 힘을 뿜어내며.',null,null,'https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CA01_DY0000011437',70,'0',2005);
+Insert into MOVIEMOVING.MOVIEINFO (MOVIEINFO_NO,MOVIEINFO_TITLE,MOVIEINFO_IMG,MOVIEINFO_VIDEO,MOVIEINFO_AGE,MOVIEINFO_RT,MOVIEINFO_CON,MOVIEINFO_VISIT,MOVIEINFO_WATCHA,MOVIEINFO_NETFLIX,MOVIEINFO_WAVVE,MOVIEINFO_GRADE,MOVIEINFO_CODE,MOVIEINFO_YEAR) values (1000016,'극장판 귀멸의 칼날_영화16','https://images.justwatch.com/poster/219029903/s276/geugjangpan-gwimyeolyi-kalnal-muhanyeolca-pyeon.webp','https://youtu.be/VviIeYKkGpM','12세','1시간','혈귀로 변해버린 여동생 네즈코를 인간으로 되돌릴 단서를 찾아 비밀조직 귀살대에 들어간 탄지로. 젠이츠, 이노스케와 새로운 임무 수행을 위해 무한열차에 탑승 후 귀살대 최강 검사 염주 렌고쿠와 합류한다.',null,'https://www.netflix.com/kr/title/80198645','https://www.netflix.com/kr/title/81312457','https://www.wavve.com/player/movie?movieid=MV_CR01_DN0000011239',100,'0',2001);
+--------------------------------------------------------
+--  DDL for Index SYS_C007619
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "MOVIEMOVING"."SYS_C007619" ON "MOVIEMOVING"."CATEGORY" ("CATEGORYLIST_NO", "MOVIEINFO_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007605
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "MOVIEMOVING"."SYS_C007605" ON "MOVIEMOVING"."CATEGORYLIST" ("CATEGORYLIST_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C007613
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "MOVIEMOVING"."SYS_C007613" ON "MOVIEMOVING"."MOVIEINFO" ("MOVIEINFO_NO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  Constraints for Table CATEGORY
+--------------------------------------------------------
+
+  ALTER TABLE "MOVIEMOVING"."CATEGORY" ADD PRIMARY KEY ("CATEGORYLIST_NO", "MOVIEINFO_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "MOVIEMOVING"."CATEGORY" MODIFY ("MOVIEINFO_NO" NOT NULL ENABLE);
+  ALTER TABLE "MOVIEMOVING"."CATEGORY" MODIFY ("CATEGORYLIST_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CATEGORYLIST
+--------------------------------------------------------
+
+  ALTER TABLE "MOVIEMOVING"."CATEGORYLIST" ADD PRIMARY KEY ("CATEGORYLIST_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "MOVIEMOVING"."CATEGORYLIST" MODIFY ("CATEGORYLIST_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table MOVIEINFO
+--------------------------------------------------------
+
+  ALTER TABLE "MOVIEMOVING"."MOVIEINFO" ADD PRIMARY KEY ("MOVIEINFO_NO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE;
+  ALTER TABLE "MOVIEMOVING"."MOVIEINFO" MODIFY ("MOVIEINFO_TITLE" NOT NULL ENABLE);
+  ALTER TABLE "MOVIEMOVING"."MOVIEINFO" MODIFY ("MOVIEINFO_NO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table CATEGORY
+--------------------------------------------------------
+
+  ALTER TABLE "MOVIEMOVING"."CATEGORY" ADD CONSTRAINT "FK_MOVIENO" FOREIGN KEY ("MOVIEINFO_NO")
+	  REFERENCES "MOVIEMOVING"."MOVIEINFO" ("MOVIEINFO_NO") ENABLE;
