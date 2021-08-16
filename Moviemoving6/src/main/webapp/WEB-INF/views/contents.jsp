@@ -24,11 +24,15 @@
                             </span>
                         </div>
                         <div class="info-btn">
-                            <div class="btn active" id="bookmark-btn">
-                                <i class="fa fa-bookmark-o disp-block"></i>
-                                <i class="fa fa-bookmark disp-none"></i>
-                                <span>보고싶어요</span>
-                            </div>
+                        	<form action="<c:url value='/mypage' />" method="post">
+					            <div class="btn active" id="bookmark-btn">
+						            <i class="fa fa-bookmark-o disp-block"></i>
+	                                <i class="fa fa-bookmark disp-none"></i>
+					                <input name="amount" class="form-control" type="number" value="1" />
+					            </div>
+					            <input name="book_id" type="hidden" value="${ book.id }">
+					            <button type="submit" class="btn btn-primary">보고싶어요</button>
+					        </form>
                             <div class="btn" id="review-btn">
                                 <i class="fa fa-star-o disp-block"></i>
                                 <i class="fa fa-star disp-none"></i>

@@ -15,6 +15,14 @@
                     <div class="mp-title">
                         <i class="fa fa-bookmark"></i> 보고싶어요
                     </div>
+                    <table class="list-wrap movie-list">
+                    	<c:forEach var="item" items="${ items }" varStatus="status">	
+	                    	<tr>
+	                    		<td>${ item.title }</td>
+	                    		<td>${ item.img }</td>
+	                    	</tr>
+                    	</c:forEach>
+                    </table>
                     <div class="list-wrap movie-list">
                         <ul class="list">
                             <li>
