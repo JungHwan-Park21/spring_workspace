@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class BookmarkVO {
 	private int User_id;
-	private List<MovieVO> MovieInfo_no;
+	private int MovieInfo_no;
+	private List<MovieVO> getItems;
 	
 }
