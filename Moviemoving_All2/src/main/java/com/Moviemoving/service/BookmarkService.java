@@ -3,16 +3,17 @@ package com.Moviemoving.service;
 import java.util.List;
 
 import com.Moviemoving.domain.BookmarkVO;
+import com.Moviemoving.domain.MovieVO;
 
 public interface BookmarkService {
-	//등록
-	public void register(BookmarkVO board);
-	//상세보기
-	public BookmarkVO get(Long bno);
-	//수정
-	public boolean modify(BookmarkVO board);
-	//삭제
-	public boolean remove(Long bno);
-	//목록
-	public List<BookmarkVO> getList();
+	
+	//보여주세요 삽입
+	public int insert(BookmarkVO vo);
+	//insert
+	public void add(MovieVO Movio);
+	//보여주세요 목록
+	public List<MovieVO> BookmarkList();
+	//update
+	public void order(BookmarkVO bookmark);
+	//delete
 }

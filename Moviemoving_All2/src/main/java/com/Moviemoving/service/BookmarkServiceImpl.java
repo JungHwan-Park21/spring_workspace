@@ -2,47 +2,53 @@ package com.Moviemoving.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Moviemoving.domain.BookmarkVO;
+import com.Moviemoving.domain.MovieVO;
 import com.Moviemoving.mapper.BookmarkMapper;
+import com.Moviemoving.mapper.MovieMapper;
+import com.Moviemoving.mapper.UserMapper;
 
-import lombok.AllArgsConstructor;
+import lombok.Setter;
 
 @Service
-@AllArgsConstructor
-public class BookmarkServiceImpl implements BookmarkService{
-	private BookmarkMapper mapper;
+
+public class BookmarkServiceImpl implements BookmarkService {
+
+	@Setter(onMethod_ = @Autowired)
+	private BookmarkMapper bookmarkMapper;
+	
+	@Setter(onMethod_ = @Autowired)
+	private UserMapper userMapper;
+	
+	@Setter(onMethod_ = @Autowired)
+	private MovieMapper movieMapper;
+	
+	
+	@Override
+	public int insert(BookmarkVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	@Override
-	public void register(BookmarkVO board) {
+	public void add(MovieVO Movio) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public BookmarkVO get(Long bno) {
+	public List<MovieVO> BookmarkList(String User_id) {
 		// TODO Auto-generated method stub
-		return null;
+		return Movie;
 	}
 
 	@Override
-	public boolean modify(BookmarkVO board) {
+	public void order(BookmarkVO bookmark) {
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
-
-	@Override
-	public boolean remove(Long bno) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public List<MovieVO> getList() {
-		// TODO Auto-generated method stub
-		return mapper.getList();
-	}
-	
 	
 }
