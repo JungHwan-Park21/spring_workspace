@@ -7,13 +7,13 @@ import com.Moviemoving.domain.MovieVO;
 
 public interface BookmarkMapper {
 	
-	//보여주세요 삽입
+	
 		public int insert(BookmarkVO vo);
-		//insert
-		public void add(MovieVO Movio);
-		//보여주세요 목록
+		
+		public void select(MovieVO Movio);
+	
 		public List<MovieVO> BookmarkList(String User_id);
-		//delete
+	
 		public void delete(int MovieInfo_no);
 	
 }

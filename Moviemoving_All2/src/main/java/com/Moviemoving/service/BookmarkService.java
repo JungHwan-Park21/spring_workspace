@@ -9,11 +9,11 @@ public interface BookmarkService {
 	
 	//보여주세요 삽입
 	public int insert(BookmarkVO vo);
-	//insert
-	public void add(MovieVO Movio);
-	//보여주세요 목록
-	public List<MovieVO> BookmarkList();
-	//update
-	public void order(BookmarkVO bookmark);
-	//delete
+	
+	public void select(MovieVO Movio);
+
+	public List<MovieVO> BookmarkList(String User_id);
+
+	public void delete(int MovieInfo_no);
+
 }

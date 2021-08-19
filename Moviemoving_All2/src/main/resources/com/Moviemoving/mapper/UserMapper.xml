@@ -29,11 +29,11 @@
   </resultMap>
   
   <select id="read" resultMap="userMap">
-SELECT 
-  u.user_id,  u.user_pw, u.user_name, a.authorities_auth
-FROM 
-  usertbl u LEFT OUTER JOIN authorities a on u.user_id = a.user_id 
-WHERE u.user_id = #{user_id} 
+	SELECT 
+	  u.user_id,  u.user_pw, u.user_name, a.authorities_auth
+	FROM 
+	  usertbl u LEFT OUTER JOIN authorities a on u.user_id = a.user_id 
+	WHERE u.user_id = #{user_id} 
   </select>
 	
 </mapper>

@@ -25,8 +25,7 @@ public class BookmarkServiceImpl implements BookmarkService {
 	
 	@Setter(onMethod_ = @Autowired)
 	private MovieMapper movieMapper;
-	
-	
+
 	@Override
 	public int insert(BookmarkVO vo) {
 		// TODO Auto-generated method stub
@@ -34,7 +33,7 @@ public class BookmarkServiceImpl implements BookmarkService {
 	}
 
 	@Override
-	public void add(MovieVO Movio) {
+	public void select(MovieVO Movio) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -42,13 +41,21 @@ public class BookmarkServiceImpl implements BookmarkService {
 	@Override
 	public List<MovieVO> BookmarkList(String User_id) {
 		// TODO Auto-generated method stub
-		return Movie;
+		return null;
 	}
 
 	@Override
-	public void order(BookmarkVO bookmark) {
+	public void delete(int MovieInfo_no) {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
+
+
+	
+	
+	
+	
 	
 }

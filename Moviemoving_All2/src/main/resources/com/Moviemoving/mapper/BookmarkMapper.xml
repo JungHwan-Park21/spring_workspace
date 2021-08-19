@@ -3,12 +3,17 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
- <mapper namespace="com.Moviemoving.mapper.BookmarkMapper">
- 	<select id="getlist" resultType="com.Moviemoving.domain.MovieVO">
- 	@Insert("select a.user_id, a.movieinfo_no, b.movieinfo_title, b.movieinfo_no, b.movieinfo_thum\r\n"
-			+ "	from bookmark a,\r\n"
-			+ "	    movieinfo b\r\n"
-			+ "	where a.movieinfo_no = b.movieinfo_no")
-	public void add(MovieVO movie);
+  <mapper namespace="com.Moviemoving.mapper.BookmarkMapper">
+    <insert id="insert">
+        insert into Bookmark(user_id, movieinfo_no)
+        values 
+          (#{user_id}, #{movieinfo_no})
+    </insert>
+
+ 	<select id="select" resultType="com.Moviemoving.domain.MovieVO">
+ 		select a.user_id, a.movieinfo_no, b.movieinfo_title, b.movieinfo_no, b.movieinfo_bkimg
+		from bookmark a,
+		    movieinfo b
+		where a.movieinfo_no = b.movieinfo_no
  	</select>
  </mapper>

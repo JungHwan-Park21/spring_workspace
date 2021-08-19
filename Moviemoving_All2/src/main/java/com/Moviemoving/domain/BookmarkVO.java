@@ -7,9 +7,10 @@ import lombok.Data;
 @Data
 public class BookmarkVO {
 	
-	private int User_id;
+	private String user_id;
 	
     private int MovieInfo_no;
     
     private List<MovieVO> BookmarkList;
+
 }
