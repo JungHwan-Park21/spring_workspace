@@ -19,7 +19,7 @@
                 <h3>영화</h3>
                 <div class="mp-box mp-bookmark">
                     <div class="mp-title">
-                        <i class="fa fa-bookmark"></i> 보고싶어요
+                        <i class="fa fa-bookmark"></i> 보고싶어요.
                     </div>
                     <div class="list-wrap movie-list">
                         <ul class="list">
