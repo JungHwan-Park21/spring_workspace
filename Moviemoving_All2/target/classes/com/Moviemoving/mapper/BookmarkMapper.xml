@@ -10,7 +10,7 @@
           (#{user_id}, #{movieinfo_no})
     </insert>
 
- 	<select id="select" resultType="com.Moviemoving.domain.MovieVO">
+ 	<select id="select" resultType="com.Moviemoving.domain.BookmarkVO">
  		select a.user_id, a.movieinfo_no, b.movieinfo_title, b.movieinfo_no, b.movieinfo_bkimg
 		from bookmark a,
 		    movieinfo b

@@ -12,7 +12,7 @@ public interface BookmarkService {
 	
 	public void select(MovieVO Movio);
 
-	public List<MovieVO> BookmarkList(String User_id);
+	public List<BookmarkVO> BookmarkList();
 
 	public void delete(int MovieInfo_no);
 

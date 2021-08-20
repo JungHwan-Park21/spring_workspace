@@ -11,6 +11,6 @@ public class BookmarkVO {
 	
     private int MovieInfo_no;
     
-    private List<MovieVO> BookmarkList;
+    private List<BookmarkVO> BookmarkList;
 
 }

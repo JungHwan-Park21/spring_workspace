@@ -38,16 +38,18 @@ public class BookmarkServiceImpl implements BookmarkService {
 		
 	}
 
-	@Override
-	public List<MovieVO> BookmarkList(String User_id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public void delete(int MovieInfo_no) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<BookmarkVO> BookmarkList() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
