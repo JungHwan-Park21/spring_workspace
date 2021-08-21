@@ -13,7 +13,8 @@ public interface MovieMapper {
 	//관리자 - 전체리스트
 	public List<MovieVO> getList();		
 	
-	//메인 베스트5 리스트
+	//메인 베스트-영화
+	public List<MovieVO> movieBest();
 	public List<MovieVO> movieNetflix();
 	public List<MovieVO> movieWatcha();
 	public List<MovieVO> movieWavve();

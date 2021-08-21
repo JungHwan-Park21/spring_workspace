@@ -60,15 +60,4 @@ public class UserController {
 		}
 	}
 
-	//로그인정보 갖고오기
-	@GetMapping("/mypage")
-	@PreAuthorize("isAuthenticated()")
-	public void info(Principal principal, Model model) {
-		log.info(principal.getName());
-		
-		UserVO uservo = service.read(principal.getName());
-		model.addAttribute("uservo", uservo);
-		
-	}
-	
 }

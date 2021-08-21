@@ -13,6 +13,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="/resources/js/control.js"></script>
+<link rel="stylesheet" href="/resources/css/style.css">
+
+<!-- ajax-csrf 토큰문제 -->
+<meta name="_csrf" id="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" id="_csrf_header" content="${_csrf.headerName}">
+</head>
+<body>
+
+</head>
+<body>
+
+
 <script tpye="text/javascript">
 	
 function registerCheck() {
@@ -76,9 +88,6 @@ function loginCheck() {
 	
 }
 </script>
-<link rel="stylesheet" href="/resources/css/style.css">
-</head>
-<body>
 
 <div id="full-wrap">
        <!-- 상단 시작 ----------->

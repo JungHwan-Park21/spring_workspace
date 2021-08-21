@@ -21,6 +21,7 @@ public class MovieController {
 	@GetMapping("/")
 	public String mainList(Model model) {
 		log.info("메인상세");
+		model.addAttribute("movieBest", service.movieBest());
 		model.addAttribute("netflix", service.movieNetflix());
 		model.addAttribute("watcha", service.movieWatcha());
 		model.addAttribute("wavve", service.movieWavve());

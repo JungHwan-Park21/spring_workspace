@@ -44,6 +44,7 @@
   	]]>
   </select> 
   
+  <!-- 카테고리 -->
   <select id="getCategory" resultType="com.Moviemoving.domain.CategoryListVO">
   	select cateList.CategoryList_name
 	from MovieInfo movie right join Category cate

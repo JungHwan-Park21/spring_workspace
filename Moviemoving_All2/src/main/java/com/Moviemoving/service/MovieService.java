@@ -10,6 +10,7 @@ public interface MovieService {
 	public List<CategoryListVO> getCategory(Long MovieInfo_no);	
 	public List<MovieVO> getList();
 	
+	public List<MovieVO> movieBest();
 	public List<MovieVO> movieNetflix();
 	public List<MovieVO> movieWatcha();
 	public List<MovieVO> movieWavve();

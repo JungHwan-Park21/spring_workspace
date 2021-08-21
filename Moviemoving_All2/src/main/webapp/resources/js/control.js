@@ -156,3 +156,79 @@ $(function(){
         $(this).parent('.review-con').find('.close-w100').hide();
     });
 })
+
+//메인 롤링
+$(function(){
+		$('.list-con li').on('click', function(){
+			var getNo = $(this).attr('class');	
+			
+			if($('.best-list-info li').css("opacity",1)){
+				$('.best-list-info li').css("opacity",0);
+			}
+			
+			$('.best-list-info li.'+getNo).animate({"opacity":1});
+	
+		})
+		
+		
+		$('.best-list-Rightarrow').on('click',function(){
+			$('.list-con ul').each(function(){
+				$(this).animate({'left':'-1200px'});
+			})
+			$('.best-list-Rightarrow').hide();
+			$('.best-list-Leftarrow').show();
+		})
+		$('.best-list-Leftarrow').on('click',function(){
+			$('.list-con ul').each(function(){
+				$(this).animate({'left':'0'});
+			})
+			$('.best-list-Rightarrow').show();
+			$('.best-list-Leftarrow').hide();
+		})
+	
+});
+	
+	
+//Ajax 토큰
+$(document).ready(function(){
+	var token = $("meta[name='_csrf']").attr("content");
+	var header = $("meta[name='_csrf_header']").attr("content");
+	$(document).ajaxSend(function(e, xhr, options) {
+		xhr.setRequestHeader(header, token); 
+	});
+});
+
+
+//북마크 중복검사 + 등록 + 삭제
+window.onload = function(){
+	var operForm = $("#operForm");   
+	
+	var User_id = $("input[name='User_id']").val();
+	var MovieInfo_no = $("input[name='MovieInfo_no']").val();
+	var data = {User_id : User_id, MovieInfo_no: MovieInfo_no};
+	
+    $.ajax({
+		type:"post",
+		url: "/bookmarkChk",
+		data : data,
+		success : function(result){
+			console.log("성공여부 : " + result);
+			
+			if(result == "fail"){
+				$('#bookmark-btn').addClass('active');
+				$('#bookmark-btn').on('click', function(){
+					operForm.attr("action","/removeBookmark").submit();
+					alert("보고싶어요를 취소했습니다.")
+				});
+			} else {
+				$('#bookmark-btn').on('click', function(){
+					operForm.attr("action","/insertBookmark").submit();
+					alert("보고싶어요를 등록했습니다.");
+				});
+			}
+		},
+		error : function(request, status, error){
+            console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+        }
+	})
+}    

@@ -53,4 +53,9 @@ public class MovieServiceImpl implements MovieService {
 		return mapper.getCategory(MovieInfo_no);
 	}
 
+	@Override
+	public List<MovieVO> movieBest() {
+		return mapper.movieBest();
+	}
+
 }

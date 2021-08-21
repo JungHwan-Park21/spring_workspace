@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.Moviemoving.domain.AuthVO;
-import com.Moviemoving.domain.BookmarkVO;
 import com.Moviemoving.domain.UserVO;
 import com.Moviemoving.mapper.UserMapper;
 
@@ -31,12 +30,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserVO read(String name) {
 		return mapper.read(name);
-	}
-
-	@Override
-	public UserVO read(BookmarkVO bookmark) {
-		// TODO Auto-generated method stub
-		return mapper.read(bookmark);
 	}
 
 	

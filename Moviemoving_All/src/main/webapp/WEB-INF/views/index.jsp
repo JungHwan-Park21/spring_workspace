@@ -4,149 +4,62 @@
 
 <%@include file="includes/header.jsp" %>
 
+
+
 <!--- 메인컨텐츠 시작 ----------->
         <div class="main-con con-wrap">
-            <section class="best">
-                <div class="vedio-bg-wrap">                    
-                    <div class="vedio-bg-right"></div>
-                    <div class="vedio-bg-left"></div>                    
-                    <!-- <iframe width="100%" height="100%" src="https://play-tv.kakao.com/embed/player/cliplink/421147074?service=player_share" allowfullscreen frameborder="0" scrolling="no" allow="autoplay; fullscreen; encrypted-media"></iframe> -->
-                    <div class="vedio-bg"></div>
-                </div>
-                <div class="best-info">
-                    <p>모가디슈</p>
-                    <span>
-                        내전으로 고립된 낯선 도시, 모가디슈 <br>
-                        지금부터 우리의 목표는 오로지 생존이다! <br>
-                        대한민국이 UN가입을 위해 동분서주하던 시기.... <br>
-                    </span>
-                    <a href="#" class="btn">보러가기 <i class="fa fa-chevron-right"></i></a>
-                </div>
-                <div class="best-list">
-                    <div class="list-con">
-                        <ul>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg01.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">1</h4>
-                                    <p>
-                                        <span class="title">모가디슈</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">드라마, 액션</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg02.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">2</h4>
-                                    <p>
-                                        <span class="title">정글 크루즈</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">액션, 어드벤처</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg03.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">3</h4>
-                                    <p>
-                                        <span class="title">보스베이비2</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg04.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">4</h4>
-                                    <p>
-                                        <span class="title">방법 : 재차의</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">미스터리, 스릴러</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg01.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">5</h4>
-                                    <p>
-                                        <span class="title">모가디슈</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">드라마, 액션</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg02.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">6</h4>
-                                    <p>
-                                        <span class="title">정글 크루즈</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">액션, 어드벤처</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg03.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">7</h4>
-                                    <p>
-                                        <span class="title">보스베이비2</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-con-img">
-                                    <img src="/resources/images/exBestListimg04.png">
-                                </div>
-                                <div class="list-con-title">
-                                    <h4 class="grade">8</h4>
-                                    <p>
-                                        <span class="title">방법 : 재차의</span>
-                                        <span>2021</span>
-                                        <span class="left-line-gray">미스터리, 스릴러</span>
-                                    </p>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="best-list-Leftarrow circle-arrow"><i class="fa fa-chevron-left"></i></div>
-                    <div class="best-list-Rightarrow circle-arrow"><i class="fa fa-chevron-right"></i></div>
-                    
-                </div>
-            </section>
+        	<section id="best">
+        		<div class="best-list-info">
+        			<ul>
+        				<c:forEach items="${movieBest}" var="movieBest">
+        					<li class="<c:out value='${movieBest.movieInfo_no}'/>">
+        						<div class="main-video-wrap" style="background-image:url('<c:out value='${movieBest.movieInfo_bkimg}'/>')">
+        							<div class="video-bg-right"></div>
+				                    <div class="video-bg-left"></div>            
+				                    <div class="video-bg"></div>
+		            				<div class="veido-wrap">
+				                        <div id="player"></div>
+				                    </div>
+				                    <div class="best-info">
+					                    <p><c:out value='${movieBest.movieInfo_title}'/></p>
+					                    <span>
+					                        <c:out value='${movieBest.movieInfo_con}'/>
+					                    </span>
+					                    <a href="/movie?MovieInfo_no=<c:out value='${movieBest.movieInfo_no}'/>" class="btn">보러가기 <i class="fa fa-chevron-right"></i></a>
+					                </div>
+        						</div>
+        					</li>
+        				</c:forEach>
+        			</ul>
+        		</div>
+        		<div class="best-list">
+	        		<div class="list-con">
+	        			<ul>
+	        				<c:forEach items="${movieBest}" var="movieBest" varStatus="status">
+		        				<li class="<c:out value='${movieBest.movieInfo_no}'/>">
+		        					<div class="list-con-img">
+		        						<img src="<c:out value='${movieBest.movieInfo_Thum}'/>">
+		        					</div>
+		        					<div class="list-con-title">
+		        						<h4 class="grade"><c:out value="${status.count}"/></h4>
+		        						<p>
+		                                   <span class="title"><c:out value="${movieBest.movieInfo_title}"/></span>
+		                                   <span><c:out value="${movieBest.movieInfo_year}"/></span>
+		                                   <span class="left-line-gray">드라마, 액션</span>
+		                               	</p>
+		        					</div>
+		        				</li>
+	        				</c:forEach>
+	        			</ul>	        			
+	        		</div>
+	        		<div class="btn-box">
+	        			<div class="best-list-Leftarrow circle-arrow"><i class="fa fa-chevron-left"></i></div>
+	           			<div class="best-list-Rightarrow circle-arrow"><i class="fa fa-chevron-right"></i></div>
+	        		</div>
+        		</div>
+        	</section>
             
-            <section class="sitebest-netflicx vedio-list">
+            <section class="sitebest-netflicx video-list">
                 <div class="sitebest-title">
                     <img src="/resources/images/logo/netflix.png">
                     <h2>
@@ -165,15 +78,13 @@
                         </div>
                         <div class="list-title">
                             <span class="title"><c:out value="${netflix.movieInfo_title}"></c:out></span>
-                            <span><c:out value="${netflix.movieInfo_year}"></c:out></span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
                         <a href="/movie?MovieInfo_no=<c:out value='${netflix.movieInfo_no}'/>" class="box-a move"></a>
                     </li>
                 </c:forEach>
                 </ul>
             </section>
-            <section class="sitebest-watcha vedio-list">
+            <section class="sitebest-watcha video-list">
                 <div class="sitebest-title">
                     <img src="/resources/images/logo/watcha.png">
                     <h2>
@@ -192,15 +103,13 @@
                         </div>
                         <div class="list-title">
                             <span class="title"><c:out value="${watcha.movieInfo_title}"></c:out></span>
-                            <span><c:out value="${watcha.movieInfo_year}"></c:out></span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
                         <a href="/movie?MovieInfo_no=<c:out value='${watcha.movieInfo_no}'/>" class="box-a move"></a>
                     </li>
                 </c:forEach>
                 </ul>
             </section>
-            <section class="sitebest-wavve vedio-list">
+            <section class="sitebest-wavve video-list">
                 <div class="sitebest-title">
                     <img src="/resources/images/logo/wavve.png">
                     <h2>
@@ -219,8 +128,6 @@
                         </div>
                         <div class="list-title">
                             <span class="title"><c:out value="${wavve.movieInfo_title}"></c:out></span>
-                            <span><c:out value="${wavve.movieInfo_year}"></c:out></span>
-                            <span class="left-line-gray">애니메이션, 어드벤처, 코미디</span>
                         </div>                        
                         <a href="/movie?MovieInfo_no=<c:out value='${wavve.movieInfo_no}'/>" class="box-a move"></a>
                     </li>

@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <%@include file="includes/header.jsp" %>
 
  <!--- 서브컨텐츠 시작 ----------->
         <div class="sub-con con-wrap">
-            <section class="vedio-info">
-                <div class="vedio-bg-wrap" style="background-image:url('<c:out value="${movie.movieInfo_bkimg}"/>')">                    
-                    <div class="vedio-bg-right"></div>
-                    <div class="vedio-bg-left"></div>
-                    <div class="vedio-bg"></div>
+            <section class="video-info">
+                <div class="video-bg-wrap" style="background-image:url('<c:out value="${movie.movieInfo_bkimg}"/>')">                    
+                    <div class="video-bg-right"></div>
+                    <div class="video-bg-left"></div>
+                    <div class="video-bg"></div>
                 </div>
                 <div class="summary-info-wrap">
                     <div class="summary-info">
@@ -24,17 +25,26 @@
                             </span>
                         </div>
                         <div class="info-btn">
-                            <div class="btn active" id="bookmark-btn">
+							<div class="btn" id="bookmark-btn">
                                 <i class="fa fa-bookmark-o disp-block"></i>
                                 <i class="fa fa-bookmark disp-none"></i>
-                                <span>보고싶어요</span>
-                            </div>
+                                <span>보고싶어요</span>                                
+                            </div>                 
                             <div class="btn" id="review-btn">
                                 <i class="fa fa-star-o disp-block"></i>
                                 <i class="fa fa-star disp-none"></i>
                                 <span>평가하기</span>
                             </div>
                         </div>
+                        <form id='operForm' action="/bookmark" method="post">
+                        	<input type="hidden" name="MovieInfo_no" value="<c:out value='${movie.movieInfo_no}'/>">
+                        	<sec:authorize access="isAuthenticated()">
+                        		<sec:authentication property="principal.username" var="user_id"/>
+                        	<input type="hidden" name="User_id" value="${user_id}">
+                        	</sec:authorize>
+                        	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        </form>
+                        
                     </div>
                     <div class="go-site">
                         <p class="title">감상 가능한 곳</p>
@@ -56,15 +66,15 @@
                 </div>
             </section>
 
-            <section class="vedio-info-con">
+            <section class="video-info-con">
                 <dl class="text">
                     <dt>연령 등급</dt>
                     <dd><c:out value="${movie.movieInfo_age}" /></dd>
                     <dt>장르</dt>
                     <dd>
-					<c:forEach items="${cateList}" var="cateList">
+					<%-- <c:forEach items="${cateList}" var="cateList">
                     	<c:out value="${cateList.categoryList_name}"/><strong>,</strong>
-                    </c:forEach>
+                    </c:forEach> --%>
 					</dd>
                     <dt>재생시간</dt>
                     <dd><c:out value="${movie.movieInfo_rt}" /></dd>
@@ -75,7 +85,7 @@
                 </dl>
             </section>
 
-            <section class="vedio-review">                
+            <section class="video-review">                
                 <div class="review-wrap">
                     <div class="review-title">
                         <p class="title"><i class="fa fa-star"></i> 평가</p>
@@ -93,7 +103,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
                             </li>
@@ -108,7 +118,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
                             </li>
@@ -122,7 +132,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
                             </li>
@@ -136,7 +146,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
                             </li>
@@ -150,7 +160,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>
                                     넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
@@ -166,7 +176,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>
                                     넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
@@ -182,7 +192,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>
                                     넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
@@ -198,7 +208,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <spna class="more sm-bt">더보기</spna>
+                                    <span class="more sm-bt">더보기</span>
                                 </div>
                                 <p>
                                     넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
