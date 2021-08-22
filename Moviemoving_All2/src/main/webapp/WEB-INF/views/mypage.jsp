@@ -45,154 +45,25 @@
                     </div>
                     <div class="review-con movie-review-list">                       
                         <ul class="review">
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
-                            <li>
-                                <div class="movie-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="title">
-                                    <span>보스 베이비</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                                    <spna class="modify-bt sm-bt">수정</spna>
-                                    <spna class="delete-bt sm-bt">삭제</spna>
-                                </div>                                
-                            </li>
+                        	 <c:forEach items="${movieRate}" var="movieRate">
+                        		<li>
+	                                <div class="list-img">
+	                                    <img src="<c:out value='${movieRate.movieInfo_Thum}'/>">
+	                                </div>
+	                                <div class="list-title">
+	                                    <span class="title"><c:out value='${movieRate.movieInfo_title}'/></span>
+	                                </div>
+	                                <div class="list-con">
+	                                    <span class="con"><c:out value='${movieRate.movieInfo_con}'/></span>
+	                                </div>
+	                                <div class="list-score">
+	                                    <span class="score"><c:out value='${movieRate.movieInfo_score}'/></span>
+	                                </div>                         
+	                                <a href="/movie?MovieInfo_no=<c:out value='${movieRate.movieInfo_no}'/>" class="box-a"></a>
+	                            </li>
+                        	</c:forEach>
                         </ul>
-                        <div class="more-w100">더보기 <i class="fa-chevron-down fa"></i></div>
-                        <div class="close-w100">접기 <i class="fa-chevron-up fa"></i></div>
-                    </div>                    
+                    </div>
                 </div>
             </section>
 
