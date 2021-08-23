@@ -6,9 +6,8 @@ import com.Moviemoving.domain.MovieRateVO;
 import com.Moviemoving.domain.MovieVO;
 
 public interface MovieRateMapper {
-		//평가 리스트
-		public List<MovieVO> movie_movieRatek(String User_id);
-		public List<MovieVO> tv_movieRate(String User_id);
+		//평가 리스트(contents)
+		public List<MovieRateVO> movie_movieRate(Long MovieInfo_no);
 		
 		//평가 등록
 		public void insertMovieRate(MovieRateVO movieRate);

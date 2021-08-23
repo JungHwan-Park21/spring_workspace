@@ -1,22 +1,26 @@
 package com.Moviemoving.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Moviemoving.domain.CategoryListVO;
+import com.Moviemoving.service.MovieRateService;
 import com.Moviemoving.service.MovieService;
 
 import lombok.AllArgsConstructor;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
-@AllArgsConstructor
 public class MovieController {
-	
-	private MovieService service;		
+	@Setter(onMethod_ = @Autowired)
+	private MovieService service;	
+	@Setter(onMethod_ = @Autowired)
+	private MovieRateService service2;
 	
 	@GetMapping("/")
 	public String mainList(Model model) {
@@ -34,6 +38,7 @@ public class MovieController {
 		log.info("영화상세");
 		model.addAttribute("movie", service.read(MovieInfo_no));
 		model.addAttribute("cateList", service.getCategory(MovieInfo_no));
+		model.addAttribute("MovieRate", service2.movie_movieRate(MovieInfo_no));
 		return "contents";
 	}	
 	

@@ -25,8 +25,8 @@
 	</insert>
 	
 	<!-- 평가하기 리스트 -->
-	<select id="Movie" resultType="com.Moviemoving.domain.MovieRateVO">
-		select * from MOvieRate
+	<select id="movie_movieRate" resultType="com.Moviemoving.domain.MovieRateVO">
+		select * from MovieRate
 		where movieinfo_no = #{movieinfo_no}
 	</select>
 	<!-- 평가하기 삭제 -->

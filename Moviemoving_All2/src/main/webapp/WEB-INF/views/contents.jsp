@@ -93,10 +93,10 @@
                     </div>
                     <div class="review-con"> 
                         <ul class="review">
-                        	<c:forEach items="${MovieRate} " var="MovieRate">
+                        	<c:forEach items="${MovieRate}" var="MovieRate">
                             <li>
                                 <div class="title">
-                                    <span>UserID</span>
+                                    <span><c:out value="${MovieRate.user_id}"/></span>
                                     <span class="review-star">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -104,12 +104,10 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </span>
-                                    <span class="more sm-bt">더보기</span>
-                                    <c:out value="${MovieRate.User_id}"/>
-                                    <c:out value="${MovieRate.MovieRate_con}"/>
-                                    <c:out value="${MovieRate.MovieRate_score}"/>
+                                    <%-- <c:out value="${MovieRate.movieRate_score}"/> --%>
                                 </div>
-                                <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
+                                <p><c:out value="${MovieRate.movieRate_con}"/></p>
+                                <span class="more sm-bt">더보기</span>
                             </li>
                             </c:forEach>
                         </ul>

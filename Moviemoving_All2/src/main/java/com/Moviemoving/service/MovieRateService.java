@@ -2,16 +2,18 @@ package com.Moviemoving.service;
 
 import java.util.List;
 
-
-
 import com.Moviemoving.domain.MovieRateVO;
-import com.Moviemoving.domain.MovieVO;
+
 
 
 public interface MovieRateService {
 
 		//평가 등록
 		public void insertMovieRate(MovieRateVO movieRate);
+		
+		//평가 리스트 (contents)
+		public List<MovieRateVO> movie_movieRate(Long movieInfo_no);
+		
 		
 		//평가 상세보기
 		/*

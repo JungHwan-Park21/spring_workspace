@@ -31,7 +31,7 @@ public class MovieRateServiceImpl implements MovieRateService{
 
 
 	@Override
-	public List<MovieRateVO> movie_movieRate(int MovieInfo_no) {
+	public List<MovieRateVO> movie_movieRate(Long MovieInfo_no) {
 		// TODO Auto-generated method stub
 		return mapper.movie_movieRate(MovieInfo_no);
 	}

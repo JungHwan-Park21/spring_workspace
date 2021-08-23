@@ -9,7 +9,7 @@ public class MovieRateVO {
 	private String MovieRate_con;
 	private String MovieRate_score;
 	private String User_id;
-	private int MovieInfo_no;
+	private Long MovieInfo_no;
 	
 	//등록완료 후 제자리에 있기 위해 Link 필요
 		public String getListLink() {
