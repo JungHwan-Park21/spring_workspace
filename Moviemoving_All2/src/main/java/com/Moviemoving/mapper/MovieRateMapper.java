@@ -11,7 +11,7 @@ public interface MovieRateMapper {
 		public List<MovieVO> tv_movieRate(String User_id);
 		
 		//평가 등록
-		public void insertBookmark(MovieRateVO movieRate);
+		public void insertMovieRate(MovieRateVO movieRate);
 		
 		//평가 상세보기
 		public MovieRateVO read(Long bno); 

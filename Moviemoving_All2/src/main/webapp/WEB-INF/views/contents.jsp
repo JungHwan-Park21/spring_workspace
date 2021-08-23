@@ -91,8 +91,9 @@
                         <p class="title"><i class="fa fa-star"></i> 평가</p>
                         <p class="average">평균 <i class="fa fa-star"></i> <strong>5.0</strong> <span>(60명)</span></p>
                     </div>
-                    <div class="review-con">                       
+                    <div class="review-con"> 
                         <ul class="review">
+                        	<c:forEach items="${MovieRate} " var="MovieRate">
                             <li>
                                 <div class="title">
                                     <span>UserID</span>
@@ -104,116 +105,13 @@
                                         <i class="fa fa-star-o"></i>
                                     </span>
                                     <span class="more sm-bt">더보기</span>
+                                    <c:out value="${MovieRate.User_id}"/>
+                                    <c:out value="${MovieRate.MovieRate_con}"/>
+                                    <c:out value="${MovieRate.MovieRate_score}"/>
                                 </div>
                                 <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
                             </li>
-
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.</p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>
-                                    넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
-                                </p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>
-                                    넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
-                                </p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>
-                                    넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
-                                </p>
-                            </li>
-                            <li>
-                                <div class="title">
-                                    <span>UserID</span>
-                                    <span class="review-star">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </span>
-                                    <span class="more sm-bt">더보기</span>
-                                </div>
-                                <p>
-                                    넷플릭스에서 어제 공개된 [킹덤: 아신전]을 시청 완료하였습니다. 사실 아주 재미있고 흥미로웠다면 빠르게 리뷰를 작성했을 텐데 '킹덤 시리즈' 세계관의 확장이라는 점에서는 긍정적인 요소가 있는 반면에 1년 4개월을 이 시리즈 후속편에 대한 기대로 기다렸을 시청자에게는 조금 실망스러운 작품이 아니었을까 싶네요. 저 역시 그래서 어쩌면 리뷰에 대한 빠른 반응이 없었는지도 모르겠고요.
-                                </p>
-                            </li>
+                            </c:forEach>
                         </ul>
 
                         <div class="list-Leftarrow circle-arrow"><i class="fa fa-chevron-left"></i></div>
@@ -230,9 +128,10 @@
                 <div class="pop-title">
                     <h2>평가하기</h2>
                 </div>
-                <form>
+                <form action="insertMovieRate" method="post">
                     <div class="title">
                         <p>모가디슈</p>
+                        <input type="text" name="MovieRate_score">
                         <span class="review-star">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -241,7 +140,13 @@
                             <i class="fa fa-star-o"></i>
                         </span>
                     </div>
-                    <textarea name="review" class="textarea-field"></textarea>
+                    <input type="hidden" name="MovieInfo_no" value="<c:out value='${movie.movieInfo_no}'/>">
+                        	<sec:authorize access="isAuthenticated()">
+                        		<sec:authentication property="principal.username" var="user_id"/>
+                        	<input type="hidden" name="User_id" value="${user_id}">
+                        	</sec:authorize>
+                        	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                    <textarea name="MovieRate_con" class="textarea-field"></textarea>
                     <p>사회적 문제가 될수 있는 발언, 욕설 및 비방은 관리자에 의해 삭제될 수 있으니 참고하여 주시기바랍니다.</p>
                     <input type="submit" value="확인" class="input-field input-submit">
                 </form>
