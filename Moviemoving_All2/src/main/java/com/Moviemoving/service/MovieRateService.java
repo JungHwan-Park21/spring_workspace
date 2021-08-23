@@ -1,15 +1,20 @@
-package com.Moviemoving.mapper;
+package com.Moviemoving.service;
 
 import java.util.List;
+
+
 
 import com.Moviemoving.domain.MovieRateVO;
 import com.Moviemoving.domain.MovieVO;
 
-public interface MovieRateMapper {
-		//평가 리스트
-		public List<MovieVO> movie_movieRatek(String User_id);
-		public List<MovieVO> tv_movieRate(String User_id);
+
+public interface MovieRateService {
+	
 		
+		public List<MovieVO> movie_movieRatek(String user_id);
+		public List<MovieVO> tv_movieRate(String user_id);
+		
+
 		//평가 등록
 		public void insertBookmark(MovieRateVO movieRate);
 		

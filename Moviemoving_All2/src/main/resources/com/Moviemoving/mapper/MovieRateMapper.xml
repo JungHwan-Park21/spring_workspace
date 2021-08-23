@@ -1,1 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="com.Moviemoving.mapper.MypageMapper">
+	<!-- 평가하기 -->
+	<select id="movie_bookmark" resultType="com.Moviemoving.domain.MovieVO">
+		SELECT
+			movie.MovieInfo_Thum, movie.MovieInfo_title, movie.MovieInfo_no
+		FROM 
+			MovieRate bk LEFT OUTER JOIN MovieInfo movie on movie.MovieInfo_no = bk.MovieInfo_no where MovieInfo_code = '0' and User_id = #{User_id}
+	</select>
+	<select id="tv_bookmark" resultType="com.Moviemoving.domain.MovieVO">
+		SELECT
+			movie.MovieInfo_Thum, movie.MovieInfo_title, movie.MovieInfo_no
+		FROM 
+			MovieRate bk LEFT OUTER JOIN MovieInfo movie on movie.MovieInfo_no = bk.MovieInfo_no where MovieInfo_code = '1' and User_id = #{User_id}
+	</select>
+	
+	<!-- 평가하기 등록 -->
+	<insert id="insertBookmark">
+		insert into MovieRate(MovieRate_con, MovieRate_score, User_id, MovieInfo_no) VALUES (#{MovieRate_con}, #{MovieRate_score},#{User_id}, #{MovieInfo_no})
+	</insert>
+	<!-- 평가하기 삭제 -->
+	<delete id="deleteBookmark">
+		delete MovieRate where user_id = #{User_id} and MovieInfo_no = #{MovieInfo_no}
+	</delete>
+	<!-- 평가하기 업데이트 -->
+	
+</mapper>
