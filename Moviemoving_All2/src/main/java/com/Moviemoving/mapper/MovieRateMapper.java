@@ -9,6 +9,10 @@ public interface MovieRateMapper {
 		//평가 리스트(contents)
 		public List<MovieRateVO> movie_movieRate(Long MovieInfo_no);
 		
+		//평가 리스트(Mypage)
+		public List<MovieRateVO> mv_MovieRate(Long MovieInfo_no);
+		public List<MovieRateVO> tv_MovieRate(Long MovieInfo_no);
+		
 		//평가 등록
 		public void insertMovieRate(MovieRateVO movieRate);
 		
