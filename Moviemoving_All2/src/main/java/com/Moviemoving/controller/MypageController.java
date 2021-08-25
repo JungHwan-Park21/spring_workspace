@@ -35,8 +35,7 @@ public class MypageController {
 		String user_id = uservo.getUser_id();
 	
 		model.addAttribute("uservo", uservo);
-		model.addAttribute("moviemark",
-				MypageService.movie_bookmark(user_id));
+		model.addAttribute("moviemark", MypageService.movie_bookmark(user_id));
 		model.addAttribute("tvmarke", MypageService.tv_bookmark(user_id));
 	}
 	

@@ -47,6 +47,12 @@
                                 영화관리
                             </a>
                         </div>
+                        <div class="nav">                      
+                            <a class="nav-link" href="movieRate">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                평점관리
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </div>

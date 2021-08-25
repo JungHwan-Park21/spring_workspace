@@ -26,7 +26,7 @@
                         	<c:forEach items="${moviemark}" var="moviemark">
                         		<li>
 	                                <div class="list-img">
-	                                    <img src="<c:out value='${moviemark.movieInfo_Thum}'/>">
+	                                    <img src="<c:out value='${moviemark.movieInfo_thum}'/>">
 	                                </div>
 	                                <div class="list-title">
 	                                    <span class="title"><c:out value='${moviemark.movieInfo_title}'/></span>
@@ -207,7 +207,7 @@
                             <c:forEach items="${tvmarke}" var="tvmarke">
                         		<li>
 	                                <div class="list-img">
-	                                    <img src="<c:out value='${tvmarke.movieInfo_Thum}'/>">
+	                                    <img src="<c:out value='${tvmarke.movieInfo_thum}'/>">
 	                                </div>
 	                                <div class="list-title">
 	                                    <span class="title"><c:out value='${tvmarke.movieInfo_title}'/></span>

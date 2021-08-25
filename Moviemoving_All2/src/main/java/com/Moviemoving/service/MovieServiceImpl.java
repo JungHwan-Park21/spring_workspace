@@ -19,43 +19,58 @@ public class MovieServiceImpl implements MovieService {
 	private MovieMapper mapper;
 
 	@Override
-	public MovieVO read(Long MovieInfo_no) {
-		log.info("get===================" + MovieInfo_no);
+	public MovieVO read(int MovieInfo_no) {
 		return mapper.read(MovieInfo_no);
 	}
 
 	@Override
 	public List<MovieVO> getList() {
-		log.info("getList===================");
 		return mapper.getList();
 	}
 
 	@Override
 	public List<MovieVO> movieNetflix() {
-		log.info("mainNetflix===================");
 		return mapper.movieNetflix();
 	}
 
 	@Override
 	public List<MovieVO> movieWatcha() {
-		log.info("movieWatcha===================");
 		return mapper.movieWatcha();
 	}
 
 	@Override
 	public List<MovieVO> movieWavve() {
-		log.info("movieWavve===================");
 		return mapper.movieWavve();
 	}
 
 	@Override
-	public List<CategoryListVO> getCategory(Long MovieInfo_no) {
+	public List<CategoryListVO> getCategory(int MovieInfo_no) {
 		return mapper.getCategory(MovieInfo_no);
 	}
 
 	@Override
 	public List<MovieVO> movieBest() {
 		return mapper.movieBest();
+	}
+
+	@Override
+	public List<MovieVO> tvBest() {
+		return mapper.tvBest();
+	}
+
+	@Override
+	public List<MovieVO> tvNetflix() {
+		return mapper.tvNetflix();
+	}
+
+	@Override
+	public List<MovieVO> tvWatcha() {
+		return mapper.tvWatcha();
+	}
+
+	@Override
+	public List<MovieVO> tvWavve() {
+		return mapper.tvWavve();
 	}
 
 }

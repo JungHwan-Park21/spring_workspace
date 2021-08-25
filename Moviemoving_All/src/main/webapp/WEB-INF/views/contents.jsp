@@ -19,9 +19,10 @@
                             <h2><c:out value="${movie.movieInfo_title}"/></h2>
                             <span><c:out value="${movie.movieInfo_year}"/></span>
                             <span class="left-line-gray cateList">
-                            <c:forEach items="${cateList}" var="cateList">
+                            <%-- <c:forEach items="${cateList}" var="cateList">
                             	<c:out value="${cateList.categoryList_name}"/><strong>,</strong>
-                            </c:forEach>
+                            </c:forEach> --%>
+                            <c:out value="${movie.movieInfo_category}" />
                             </span>
                         </div>
                         <div class="info-btn">
@@ -61,7 +62,7 @@
                         </div>
                     </div>
                     <div class="poster-img">
-                        <img src="${movie.movieInfo_Thum}">
+                        <img src="${movie.movieInfo_thum}">
                     </div>
                 </div>
             </section>
@@ -71,10 +72,8 @@
                     <dt>연령 등급</dt>
                     <dd><c:out value="${movie.movieInfo_age}" /></dd>
                     <dt>장르</dt>
-                    <dd>
-					<%-- <c:forEach items="${cateList}" var="cateList">
-                    	<c:out value="${cateList.categoryList_name}"/><strong>,</strong>
-                    </c:forEach> --%>
+                    <dd class="cateList">
+					<c:out value="${movie.movieInfo_category}" />
 					</dd>
                     <dt>재생시간</dt>
                     <dd><c:out value="${movie.movieInfo_rt}" /></dd>

@@ -27,13 +27,17 @@ $(function(){
     }); 
     
     $('.pop-close-bt').on('click',function(){
+    	$('.resetForm').each(function(){
+        	this.reset();
+        });
+        $('.error-message').hide();
         $('.pop-wrap-bg').hide();
-        $('.pop-wrap').removeClass('pop-wrap');
+        $('.pop-wrap').removeClass('pop-wrap');        
     });
 
     $(window).resize(function(){
         popupCenter();
-    })
+    });
 })
 
 //팝업 center 정렬
@@ -232,3 +236,128 @@ window.onload = function(){
         }
 	})
 }    
+
+
+
+//회원가입
+$(function(){
+	
+	var overlapChk = 0;
+	
+	//회원가입 버튼
+	$("#registerBtn").on("click", function(){
+    var chkId = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+    var chkPw= RegExp(/(?=.*\d{1,60})(?=.*[a-zA-Z]{1,60}).{4,60}$/);
+    var chkName= RegExp(/^[a-zA-Z가-힣]+$/);
+
+    //회원가입 이름 null 확인
+	if($("#register-user_name").val()==""){
+		$("#register-name-error").html("올바른 이름을 입력해주세요").show();
+	} else {$("#register-name-error").html("");}
+    
+    
+    //회원가입 아이디 null 확인
+    if($("#register-user_id").val() == ""){
+      $("#register-id-error").html("올바른 아이디(이메일)를 입력해주세요").show();
+    } else {$("#register-id-error").html("");}
+    
+    
+    //회원가입 페스워드 null 확인
+    if($("#register-user_pw").val()==""){
+    	$("#register-pw-error").html("올바른 비밀번호를 입력해주세요").show();
+	} else {$("#register-pw-error").html("");}
+
+
+    //회원가입 이름 유효성 검사
+    if(!chkName.test($("#register-user_name").val())){
+		$("#register-name-error").html("올바른 이름을 입력해주세요").show();
+      $("#register-user_name").val("");
+      $("#register-user_name").focus();
+    } 
+    
+    
+    //회원가입 아이디 유효성 검사
+    if(!chkId.test($("#register-user_id").val())){
+		$("#register-id-error").html("올바른 아이디(이메일)를 입력해주세요").show();
+      $("#register-user_id").val("");
+      $("#register-user_id").focus();
+    } 
+    
+    
+    //회원가입 비밀번호 유효성 검사
+    if(!chkPw.test($("#register-user_pw").val())){
+		$("#register-pw-error").html("올바른 비밀번호를 입력해주세요").show();
+      $("#register-user_pw").val("");
+      $("#register-user_pw").focus();
+    }
+    
+    
+    //회원가입 하나라도 빈칸이 있으면 안됨
+    if($("#register-user_id").val()=="" || $("#register-user_pw").val()=="" || $("#register-user_name").val()=="" ){
+    	return false;
+	} 
+    
+	//회원가입 중복검사 하세요
+    if(overlapChk == 0){
+    	alert("아이디(이메일) 중복검사 해주세요.");
+    	return false;
+    }
+	
+    
+    //회원가입 성공 메세지(창)
+    alert("회원가입이 정상적으로 완료됐습니다.");
+    
+	});
+	
+	//회원가입 아이디 중복확인 버튼
+	$("#overlapBtn").on("click", function(){
+	var chkId = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+	
+	if($("#register-user_id").val()==""){
+		$("#register-id-error").html("올바른 아이디(이메일)를 입력해주세요").show();
+		$("#register-user_id").focus();
+	} else if(!chkId.test($("#register-user_id").val())){
+		$("#register-id-error").html("올바른 아이디(이메일)를 입력해주세요").show();
+	      $("#register-user_id").val("");
+	      $("#register-user_id").focus();
+	    } else {
+	$.ajax({
+		url : "/overlap",
+		type : "get",
+		dataType : "json",
+		data : {id : $("#register-user_id").val()},
+		success : function(data){
+			if(data == 0){
+				$("#register-id-error").html("사용중인 아이디(이메일)입니다").show();
+				overlapChk = 0;
+			}else if(data == 1){
+				$("#register-id-error").html("사용 가능한 아이디(이메일)입니다").show();
+				overlapChk = 1;
+				}
+			}
+		})
+		}		
+	});
+	
+	
+	//로그인 버튼
+	$("#loginBtn").click(function(){
+		
+		//로그인 아이디 null 확인
+		if($("#login-user_id").val()==""){
+			$("#login-id-error").html("아이디(이메일)를 입력해주세요").show;
+			$("#login-user_id").focus();
+		} else {$("#login-id-error").html("");}
+
+		//로그인 비밀번호 null 확인
+		if($("#login-user_pw").val()==""){
+			$("#login-pw-error").html("비밀번호를 입력해주세요").show;
+		} else {$("#login-pw-error").html("");}
+		
+		//로그인 하나라도 빈 칸 있으면 안됨
+	    if($("#login-user_id").val()=="" || $("#login-user_pw").val()=="" ){
+	    	return false;
+		} 
+		
+	});	
+});

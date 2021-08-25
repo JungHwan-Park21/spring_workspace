@@ -2,55 +2,96 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-  <mapper namespace="com.Moviemoving.mapper.MovieMapper">
-  <!-- 전체 영화리스트 -->
-  <select id="getList" resultType="com.Moviemoving.domain.MovieVO">
+
+<mapper namespace="com.Moviemoving.mapper.MovieMapper">
+	<!-- 전체 영화리스트 -->
+	<select id="getList" resultType="com.Moviemoving.domain.MovieVO">
   	<![CDATA[
  	select * from MovieInfo where MovieInfo_no > 0
  	]]>
-  </select>
-  
-  <!-- 영화상세 -->
-  <select id="read" resultType="com.Moviemoving.domain.MovieVO">
-  	select * from MovieInfo where MovieInfo_no = #{MovieInfo_no}
-  </select>
-  
-  <!-- 영화메인-전체 -->
-  <select id="movieBest" resultType="com.Moviemoving.domain.MovieVO">
+	</select>
+
+	<!-- 영화상세 -->
+	<select id="read" resultType="com.Moviemoving.domain.MovieVO">
+		select * from MovieInfo where
+		MovieInfo_no = #{MovieInfo_no}
+	</select>
+
+	<!-- 영화메인-전체 -->
+	<select id="movieBest"
+		resultType="com.Moviemoving.domain.MovieVO">
   <![CDATA[
-  select * from MovieInfo where MovieInfo_code = '0' and rownum <= 8 order by MovieInfo_grade desc, MovieInfo_year desc
+  select * from MovieInfo where MovieInfo_code = '0' and rownum <= 8 and (MovieInfo_watcha is not null or MovieInfo_wavve is not null or MovieInfo_netflix is not null)
+  order by MovieInfo_grade desc, MovieInfo_year desc
   ]]>
-  </select>
-  
-  <!--  영화메인-넷플릭스 인기5 -->
-   <select id="movieNetflix" resultType="com.Moviemoving.domain.MovieVO">
+	</select>
+
+	<!-- 영화메인-넷플릭스 인기5 -->
+	<select id="movieNetflix"
+		resultType="com.Moviemoving.domain.MovieVO">
    <![CDATA[
   	select * from MovieInfo where MovieInfo_code = '0' and MovieInfo_netflix is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
   	]]>
-  </select>
-  
-  <!--  영화메인-왓챠 인기5 -->
-   <select id="movieWatcha" resultType="com.Moviemoving.domain.MovieVO">
+	</select>
+
+	<!-- 영화메인-왓챠 인기5 -->
+	<select id="movieWatcha"
+		resultType="com.Moviemoving.domain.MovieVO">
    <![CDATA[
   	select * from MovieInfo where MovieInfo_code = '0' and MovieInfo_watcha is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
   	]]>
-  </select>
-  
-  <!--  영화메인-웨이브 인기5 -->
-   <select id="movieWavve" resultType="com.Moviemoving.domain.MovieVO">
+	</select>
+
+	<!-- 영화메인-웨이브 인기5 -->
+	<select id="movieWavve"
+		resultType="com.Moviemoving.domain.MovieVO">
    <![CDATA[
   	select * from MovieInfo where MovieInfo_code = '0' and MovieInfo_wavve is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
   	]]>
-  </select> 
-  
-  <!-- 카테고리 -->
-  <select id="getCategory" resultType="com.Moviemoving.domain.CategoryListVO">
-  	select cateList.CategoryList_name
-	from MovieInfo movie right join Category cate
-	on movie.MovieInfo_no = cate.movieinfo_no
-	right join CategoryList cateList on catelist.categorylist_no = cate.categorylist_no
-	where movie.MovieInfo_no = #{MovieInfo_no}
-  </select>  
-  
-  </mapper>
+	</select>
+
+	<!-- 카테고리 -->
+	<select id="getCategory"
+		resultType="com.Moviemoving.domain.CategoryListVO">
+		select cateList.CategoryList_name
+		from MovieInfo movie right
+		join Category cate
+		on movie.MovieInfo_no = cate.movieinfo_no
+		right join
+		CategoryList cateList on catelist.categorylist_no =
+		cate.categorylist_no
+		where movie.MovieInfo_no = #{MovieInfo_no}
+	</select>
+
+
+	<!-- tv메인-전체 -->
+	<select id="tvBest" resultType="com.Moviemoving.domain.MovieVO">
+  <![CDATA[
+  select * from MovieInfo where MovieInfo_code = '1' and rownum <= 8 and (MovieInfo_watcha is not null or MovieInfo_wavve is not null or MovieInfo_netflix is not null)
+  order by MovieInfo_grade desc, MovieInfo_year desc
+  ]]>
+	</select>
+
+	<!-- tv메인-넷플릭스 인기5 -->
+	<select id="tvNetflix"
+		resultType="com.Moviemoving.domain.MovieVO">
+   <![CDATA[
+  	select * from MovieInfo where MovieInfo_code = '1' and MovieInfo_netflix is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
+  	]]>
+	</select>
+
+	<!-- tv메인-왓챠 인기5 -->
+	<select id="tvWatcha"
+		resultType="com.Moviemoving.domain.MovieVO">
+   <![CDATA[
+  	select * from MovieInfo where MovieInfo_code = '1' and MovieInfo_watcha is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
+  	]]>
+	</select>
+
+	<!-- tv메인-웨이브 인기5 -->
+	<select id="tvWavve" resultType="com.Moviemoving.domain.MovieVO">
+   <![CDATA[
+  	select * from MovieInfo where MovieInfo_code = '1' and MovieInfo_wavve is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
+  	]]>
+	</select>
+</mapper>

@@ -1,681 +1,188 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@include file="includes/header.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ include file="includes/header.jsp"%>
+
+<!-- 페이징처리 자바스크립트 ------------------------------------------------>
+<script>
+	$(document).ready(function() {
+		var moveForm = $("#moveForm");
+
+		$(".pageInfo a").on("click", function(e) {
+
+			e.preventDefault();
+			moveForm.find("input[name='pageNum']").val($(this).attr("href"));
+			moveForm.attr("action", "/search");
+			moveForm.submit();
+
+		});
+	});
+</script>
+<!-- 페이징처리 자바스크립트 -->
+
+
 
 <!--- 서브컨텐츠 시작 ----------->
-        <div class="search-con con-wrap">
-            <form>
-                <label class="search-label">
-                    <input type="text" name="search" class="input-field input-search" maxlength="100">
-                    <button class="search-bt"><i class="fa fa-search"></i></button>
-                </label>
-            </form>
-            <section id="search-option">
-                <form>
-                    <div class="genre-wrap">
-                        <ul>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="판타지">
-                                    판타지 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="액션">
-                                    액션 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="SF">
-                                    SF (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="코미디">
-                                    코미디 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="어드벤처">
-                                    어드벤처 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="애니메이션">
-                                    애니메이션 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="미스터리">
-                                    미스터리 (10)
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="checkbox" class="check" name="genreID" value="스릴러">
-                                    스릴러 (10)
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cate-wrap">
-                        <ul class="category-select">
-                            <li class="active">전체 (60)</li>
-                            <li>영화 (30)</li>
-                            <li>TV프로그램 (30)</li>
-                        </ul>
-                        <select>
-                            <option value="30">30개</option>
-                            <option value="50">50개</option>
-                            <option value="100">100개</option>
-                        </select>
-                    </div>
-                </form>
-            </section>
-            <section id="search-movie">
-                <h3>영화</h3>
-                <div class="search-box">
-                    <div class="list-wrap">
-                        <ul>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="list-num">
-                        <ul>
-                            <li><i class="fa fa-angle-double-left"></i></li>
-                            <li><i class="fa fa-angle-left"></i></li>                            
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li><i class="fa fa-angle-right"></i></li>
-                            <li><i class="fa fa-angle-double-right"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section id="search-tv">
-                <h3>TV프로그램</h3>
-                <div class="search-box">
-                    <div class="list-wrap">
-                        <ul>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg01.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">킹덤 : 아신전</span>
-                                </div>                        
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg02.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">블러드 레드 스카이</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg03.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">이스케이프룸</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg04.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">지오스톰</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                            <li>                                
-                                <div class="list-img">
-                                    <img src="/resources/images/exListimg05.png">
-                                </div>
-                                <div class="list-title">
-                                    <span class="title">보스 베이비</span>
-                                </div>
-                                <a href="#" class="box-a"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="list-num">
-                        <ul>
-                            <li><i class="fa fa-angle-double-left"></i></li>
-                            <li><i class="fa fa-angle-left"></i></li>                            
-                            <li class="active">1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                            <li>6</li>
-                            <li>7</li>
-                            <li>8</li>
-                            <li>9</li>
-                            <li>10</li>
-                            <li><i class="fa fa-angle-right"></i></li>
-                            <li><i class="fa fa-angle-double-right"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- //메인컨텐츠 끝 ----------->
+<!--검색창 ----------------------------------------------->
+<div class="search-con con-wrap">
+	<form class="search-keywordBOx">
+		<label class="search-label"> <input type="text" name="keyword"
+			value="${pageMaker.cri.keyword}" class="input-field input-search"
+			maxlength="100">
+			<button class="search-bt">
+				<i class="fa fa-search"></i>
+			</button>
+		</label>
+	</form>
+	<!--검색창 끝  -->
+	<!--  장르 체크박스 ------------------------------------------------------------------------- -->
+	<section id="search-option">
+		<form>
+			<div class="genre-wrap">
+				<ul>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="판타지"> 판타지 (10<!-- 여기에  내용 넣어야함-->)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="액션"> 액션 (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="SF"> SF (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="코미디"> 코미디 (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="어드벤처"> 어드벤처 (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="애니메이션"> 애니메이션 (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="미스터리"> 미스터리 (10)
+					</label></li>
+					<li><label> <input type="checkbox" class="check"
+							name="genreID" value="스릴러"> 스릴러 (10)
+					</label></li>
+				</ul>
+			</div>
+			<div class="cate-wrap">
+				<ul class="category-select">
+					<li class="active">전체 (60)</li>
+					<li>영화 (30)</li>
+					<li>TV프로그램 (30)</li>
+				</ul>
+				<!-- 목록 출력 수량 변경 --------------------->
+				<select>
+					<option value="30">30개</option>
+					<option value="50">50개</option>
+					<option value="100">100개</option>
+				</select>
+				<!-- 목록 출력 수량 변경 -->
+			</div>
+		</form>
+	</section>
+	<!--  장르 체크박스-------------->
 
-<%@include file="includes/footer.jsp" %>
+	<!-- 영화 목록 ------------------------------------------------------------------>
+	<section id="search-movie">
+		<h3>영화</h3>
+		<div class="search-box">
+			<div class="list-wrap">
+				<ul>
+					<c:forEach items="${list}" var="list">
+						<li>
+							<div class="list-img">
+								<img src="<c:out value = '${list.movieInfo_thum}' />">
+							</div>
+							<div class="list-title">
+								<span class="title"><c:out
+										value="${list.movieInfo_title}" /></span>
+							</div> <a href="#" class="box-a"></a>
+						</li>
+					</c:forEach>
+				</ul>
+			</div>
+
+			<!-- 페이지번호 ------------------------------------------------------------------------>
+			<div class="list-num">
+				<div class="pageInfo_area">
+					<ul id="pageInfo" class="pageInfo">
+						<!-- 이전페이지 버튼 -->
+						<c:if test="${pageMaker.prev}">
+							<li class="pageInfo_btn previous"><a
+								href="${pageMaker.startPage-1}"> prev </a></li>
+						</c:if>
+
+						<!--  각 번호 페이지 버튼 -->
+						<c:forEach var="num" begin="${pageMaker.startPage}"
+							end="${pageMaker.endPage}">
+							<li class="pageInfo_btn"><a href="${num}">${num}</a></li>
+						</c:forEach>
+
+						<!-- 다음페이지 버튼 -->
+						<c:if test="${pageMaker.next}">
+							<li class="pageInfo_btn next"><a
+								href="${pageMaker.endPage +1}"> next </a></li>
+						</c:if>
+
+					</ul>
+				</div>
+			</div>
+
+			<form id='moveForm' action='/search' method='get'>
+				<input type='hidden' name='pageNum' value='${pageMaker.cri.pageNum}'>
+				<input type='hidden' name='amount' value='${pageMaker.cri.amount}'>
+			</form>
+			<!-- 페이지번호 -->
+		</div>
+	</section>
+	<!-- 영화 목록 -->
+	<!-- TV 목록 ----------------------------------------------------------------->
+	<section id="search-tv">
+		<h3>TV프로그램</h3>
+		<div class="search-box">
+			<div class="list-wrap">
+				<ul>
+					<c:forEach items="${list}" var="list">
+						<li>
+							<div class="list-img">
+								<img src="<c:out value = '${list.movieInfo_thum}' />">
+							</div>
+							<div class="list-title">
+								<span class="title"><c:out value="${list.movieInfo_title}" /></span>
+							</div> <a href="#" class="box-a"></a>
+						</li>
+					</c:forEach>
+				</ul>
+			</div>
+
+			<!-- tv페이징 목록-------------------------------------------->
+			<div class="list-num">
+				<ul>
+					<c:if test="${pageMaker.prev }">
+						<li class="paginate_button1 previous"><a
+							href="${pageMaker.startPage -1}" id="paging-bt">Previous</a></li>
+					</c:if>
+
+					<c:forEach var="num" begin="${pageMaker.startPage}"
+						end="${pageMaker.endPage}">
+						<li class='paginate_button1 ${pageMaker.cri.pageNum == num ? "active" : "" } '>
+						<a href="${num}">${num}</a></li>
+					</c:forEach>
+
+					<c:if test="${pageMaker.next }">
+						<li class="paginate_button1 next"><a
+							href="${pageMaker.endPage +1}">Next</a></li>
+					</c:if>
+				</ul>
+			</div>
+			<!-- tv페이징 목록 -->
+		</div>
+	</section>
+	<!-- TV 목록 -->
+</div>
+<!-- //서브컨텐츠 끝 ----------->
+
+<%@include file="includes/footer.jsp"%>
