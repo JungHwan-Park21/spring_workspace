@@ -47,7 +47,16 @@
 	                                            	<i class="netflix-icon">넷플릭스</i>
 	                                            </c:if>
                                             </td>
-                                                                                     
+                                            <td>
+	                                            <c:if test="${movieList.movieInfo_watcha != null}">
+	                                            	<i class="watcha-icon">왓챠</i>
+	                                            </c:if>
+                                            </td>                                            
+                                            <td>
+                                            	<c:if test="${movieList.movieInfo_wavve != null}">
+                                            		<i class="wavve-icon">웨이브</i>
+                                            	</c:if>
+                                            </td>                                            
                                         </tr>
                                     </c:forEach>
                                     </from>                                    

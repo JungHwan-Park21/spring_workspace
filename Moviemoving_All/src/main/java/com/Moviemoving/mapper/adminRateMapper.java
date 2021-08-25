@@ -1,5 +1,11 @@
 package com.Moviemoving.mapper;
 
-public interface adminRateMapper {
+import java.util.List;
 
+import com.Moviemoving.domain.adminRateVO;
+
+public interface adminRateMapper {
+	
+
+	public List<adminRateVO> adminRate();
 }

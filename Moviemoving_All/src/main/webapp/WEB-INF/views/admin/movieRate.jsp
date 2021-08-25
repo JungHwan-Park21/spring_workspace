@@ -32,17 +32,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <from id="adminMovie" method="post">
+                                    
                                     <c:forEach items="${movieRate}" var="movieRate">
                                         <tr>
-                                        	<td style="text-align:center;">
-                                        		<input type="checkbox" id="mainshow" name="mainshow" value="${movieRate.movieRate_con}">
-                                        	</td>
-                                            <td>${movieRate.movieRate_con}</td>
-                                            <td>${movieRate.movieRate_con}</td>                                           
+                                        	<td><c:out value="${movieRate.MovieInfo_no}"/></td>
+                                        	<td><c:out value="${movieRate.User_id}"/></td>
+                                            <td><c:out value="${movieRate.MovieRate_con}"/></td>
+                                            <td><c:out value="${movieRate.MovieRate_score}"/></td>                                           
                                         </tr>
                                     </c:forEach>
-                                    </from>                                    
+                                                                  
                                     </tbody>
                                 </table>
                             </div>

@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.Moviemoving.domain.CategoryListVO;
 import com.Moviemoving.service.MovieService;
+import com.Moviemoving.service.adminRateService;
 
+import jdk.internal.org.jline.utils.Log;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
@@ -17,7 +19,9 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 @AllArgsConstructor
 public class MovieController {	
-	private MovieService service;		
+	private MovieService service;
+	
+	private adminRateService service2;
 	
 	@GetMapping("/")
 	public String mainList(Locale locale, Model model) {
@@ -53,8 +57,8 @@ public class MovieController {
 	}
 	
 	//admin
-		@GetMapping("/admin/movieRate")
-		public void Rate(Model model) {
-			model.addAttribute("movieRate", service.getList());
-		}
+	@GetMapping("/admin/movieRate")
+	public void Rate(Model model) {
+		model.addAttribute("movieRate", service2.adminRate());
+	}
 }
