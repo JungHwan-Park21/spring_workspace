@@ -80,7 +80,7 @@
 			                            <a href="/admin/modify?MovieInfo_no=<c:out value='${movieList.movieInfo_no}'/>" class="btn btn=primary">수정</a>
 			                             
 			                           	<a href="/admin/movieList" class="btn btn=primary">목록</a>
-			                             
+			                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />            
                             </div>
                         </div>
                     </div>

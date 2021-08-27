@@ -79,6 +79,7 @@
                                 			</div>
                                 			<button type="submit" class="btn btn-primary">등록</button>
                                 			<button type="reset" class="btn btn-primary">reset</button>
+                                		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                 		</form>
                                 	</div>
                                 	

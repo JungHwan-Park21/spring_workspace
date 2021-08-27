@@ -14,6 +14,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         
+        <%-- <!-- ajax-csrf 토큰문제 -->
+		<meta name="_csrf" id="_csrf" content="${_csrf.token}">
+		<meta name="_csrf_header" id="_csrf_header" content="${_csrf.headerName}">
+		
+		<script>
+		//Ajax 토큰
+		$(document).ready(function(){
+			var token = $("meta[name='_csrf']").attr("content");
+			var header = $("meta[name='_csrf_header']").attr("content");
+			$(document).ajaxSend(function(e, xhr, options) {
+				xhr.setRequestHeader(header, token); 
+			});
+		});
+		</script> --%>
+		
         <!-- FLEXSLIDER - CSS & JS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.js"></script>

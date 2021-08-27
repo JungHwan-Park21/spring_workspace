@@ -76,11 +76,12 @@
 			                             <button type="submit" data-oper="modefy" class="btn btn=primary">수정</button>
 			                             <button type="submit" data-oper="remove" class="btn btn=primary">삭제</button>
 			                             <button type="submit" data-oper="list" class="btn btn=primary">목록</button>
+                                	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                 	</form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
-            </div>
+          
 <%@include file="footer.jsp" %>

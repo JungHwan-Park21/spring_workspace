@@ -136,5 +136,5 @@
                         </div>
                     </div>
                 </main>
-            </div>
+          
 <%@include file="footer.jsp" %>
