@@ -24,4 +24,7 @@ public interface MovieMapper {
 	public List<MovieVO> tvNetflix();
 	public List<MovieVO> tvWatcha();
 	public List<MovieVO> tvWavve();
+	
+
+	
 }

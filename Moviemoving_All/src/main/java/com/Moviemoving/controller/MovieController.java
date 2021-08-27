@@ -5,13 +5,14 @@ import java.util.Locale;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.Moviemoving.domain.CategoryListVO;
-import com.Moviemoving.service.MovieService;
-import com.Moviemoving.service.adminRateService;
 
-import jdk.internal.org.jline.utils.Log;
+import com.Moviemoving.domain.CategoryListVO;
+
+import com.Moviemoving.service.MovieService;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
@@ -20,8 +21,7 @@ import lombok.extern.log4j.Log4j;
 @AllArgsConstructor
 public class MovieController {	
 	private MovieService service;
-	
-	private adminRateService service2;
+
 	
 	@GetMapping("/")
 	public String mainList(Locale locale, Model model) {
@@ -50,15 +50,7 @@ public class MovieController {
 		return "contents";
 	}	
 	
-	//admin
-	@GetMapping("/admin/movieList")
-	public void list(Model model) {
-		model.addAttribute("movieList", service.getList());
-	}
 	
-	//admin
-	@GetMapping("/admin/movieRate")
-	public void Rate(Model model) {
-		model.addAttribute("movieRate", service2.adminRate());
-	}
+	
+	
 }

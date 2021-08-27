@@ -11716,3 +11716,6 @@ body {
     border-radius: 10px;
     font-style: normal;
 }
+
+
+table tr td{text-overflow: ellipsis; white-space: nowrap; max-width:150px;}

@@ -94,4 +94,5 @@
   	select * from MovieInfo where MovieInfo_code = '1' and MovieInfo_wavve is not null and rownum <= 5 order by MovieInfo_grade desc, MovieInfo_year desc
   	]]>
 	</select>
+	
 </mapper>
