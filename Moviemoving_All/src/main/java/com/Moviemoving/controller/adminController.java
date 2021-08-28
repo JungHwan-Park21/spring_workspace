@@ -60,7 +60,7 @@ public class adminController {
 		public void get(@RequestParam("MovieInfo_no")int MovieInfo_no,Model model) {
 			
 			log.info("MovieInfo_no");
-			model.addAttribute("movieList",service.get(MovieInfo_no));
+			model.addAttribute("getList",service.get(MovieInfo_no));
 		}
 		@PostMapping("/modify")
 		public String modify(MovieVO movie, RedirectAttributes rttr) {

@@ -14,69 +14,86 @@
                                 <div class="panel-body">
                                 		<form role="form" action="/admin/modify" method="post">
 										<div class="form-group">
-					                    		<label>분류코드</label>
-					                        	<input class="form-control" name="분류코드" value='<c:out value="${movieList.movieInfo_code}"/>'>
+					                    		<label>code</label>
+					                        	<input class="form-control" name="code" value='<c:out value="${getList.movieInfo_code}"/>'>
 					                    </div>
 					                    <div class="form-group">
-					                            <label>영화번호</label>
-					                            <input class="form-control" name="title" value="${movieList.movieInfo_no}">
+					                            <label>no</label>
+					                            <input class="form-control" name="no" value="${getList.movieInfo_no}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_title}">
+					                             <label>title</label>
+					                             <input class="form-control" name="title" value="${getList.movieInfo_title}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_year}">
+					                             <label>year</label>
+					                             <input class="form-control" name="year" value="${getList.movieInfo_year}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                           	 <input class="form-control" name="title" value="${movieList.movieInfo_age}">
+					                             <label>age</label>
+					                           	 <input class="form-control" name="age" value="${getList.movieInfo_age}">
 					                	</div>
 					                    <div class="form-group">
-					                     		 <label>영화번호</label>
-					                  			 <input class="form-control" name="title" value="${movieList.movieInfo_rt}">
+					                     		 <label>rt</label>
+					                  			 <input class="form-control" name="rt" value="${getList.movieInfo_rt}">
 					                    </div>
 					                   	<div class="form-group">
-					                     		 <label>영화번호</label>
-					                   	    	 <input class="form-control" name="title" value="${movieList.movieInfo_visit}">
+					                     		 <label>visit</label>
+					                   	    	 <input class="form-control" name="visit" value="${getList.movieInfo_visit}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_con}">
+					                             <label>con</label>
+					                             <input class="form-control" name="con" value="${getList.movieInfo_con}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_thum}">
+					                             <label>thum</label>
+					                             <input class="form-control" name="thum" value="${getList.movieInfo_thum}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_bkimg}">
+					                             <label>bkimg</label>
+					                             <input class="form-control" name="bkimg" value="${getList.movieInfo_bkimg}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_video}">
+					                             <label>video</label>
+					                             <input class="form-control" name="video" value="${getList.movieInfo_video}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_netflix}">
+					                             <label>netflix</label>
+					                             <input class="form-control" name="netflix" value="${getList.movieInfo_netflix}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_watcha}">
+					                             <label>watcha</label>
+					                             <input class="form-control" name="watcha" value="${getList.movieInfo_watcha}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_wavve}">
+					                             <label>wavve</label>
+					                             <input class="form-control" name="wavve" value="${getList.movieInfo_wavve}">
 					                    </div>
 					                    <div class="form-group">
-					                             <label>영화번호</label>
-					                             <input class="form-control" name="title" value="${movieList.movieInfo_category}">
+					                             <label>category</label>
+					                             <input class="form-control" name="category" value="${getList.movieInfo_category}">
 					                    </div>
 			                             <button type="submit" data-oper="modify" class="btn btn-primary">수정</button>
 			                             <button type="submit" data-oper="remove" class="btn btn-primary">삭제</button>
 			                             <button type="submit" data-oper="list" class="btn btn-primary">목록</button>
                                 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                                	
+                                	 <script>
+                                		$(document).ready(function(){
+                                			var formObj=$("form");
+                                			$("button").on("click",function(e){
+                                				e.preventDefault();
+                                				var operation=$(this).data("oper");
+                                				if(operation==="remove"){
+                                					formObj.attr("action","/admin/remove");
+                                				}else if(operation==="list"){
+                                					self.location="/admin/movieList";
+                                					return;
+                                				}
+                                				formObj.submit();
+                                			});
+                                		});
+                                	</script>
                                 	</form>
                                 </div>
                             </div>

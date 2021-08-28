@@ -29,13 +29,13 @@ public class adminServiceImpl implements adminService{
 	@Override
 	public boolean modify(MovieVO movie) {
 		// TODO Auto-generated method stub
-		return false;
+		return mapper.update(movie)==1;
 	}
 
 	@Override
 	public boolean remove(int MovieInfo_no) {
 		// TODO Auto-generated method stub
-		return false;
+		return mapper.delete(MovieInfo_no)==1;
 	}
 
 	@Override

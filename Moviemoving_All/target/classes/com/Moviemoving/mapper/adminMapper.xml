@@ -25,22 +25,26 @@
 	
 	<update id="update">
 		update MovieInfo
-		set MovieInfo_code=#{MovieInfo_code},
-		MovieInfo_title=#{MovieInfo_title},
-		MovieInfo_year=#{MovieInfo_year},
-		MovieInfo_age=#{MovieInfo_age},
-		MovieInfo_rt=#{MovieInfo_rt},
-		MovieInfo_visit=#{MovieInfo_visit},
-		MovieInfo_con=#{MovieInfo_con},
-		MovieInfo_Thum=#{MovieInfo_Thum},
-		MovieInfo_bkimg=#{MovieInfo_bkimg},
-		MovieInfo_video=#{MovieInfo_video},
-		MovieInfo_watcha=#{MovieInfo_watcha},
-		MovieInfo_wavve=#{MovieInfo_wavve},
-		MovieInfo_wavve=#{MovieInfo_wavve},
-		MovieInfo_wavve=#{MovieInfo_category},
+		set MovieInfo_code=#{MovieInfo_code, jdbcType=VARCHAR},
+		MovieInfo_title=#{MovieInfo_title, jdbcType=VARCHAR},
+		MovieInfo_year=#{MovieInfo_year, jdbcType=VARCHAR},
+		MovieInfo_age=#{MovieInfo_age, jdbcType=VARCHAR},
+		MovieInfo_rt=#{MovieInfo_rt, jdbcType=VARCHAR},
+		MovieInfo_visit=#{MovieInfo_visit, jdbcType=VARCHAR},
+		MovieInfo_con=#{MovieInfo_con, jdbcType=VARCHAR},
+		MovieInfo_thum=#{MovieInfo_thum, jdbcType=VARCHAR},
+		MovieInfo_bkimg=#{MovieInfo_bkimg, jdbcType=VARCHAR},
+		MovieInfo_video=#{MovieInfo_video, jdbcType=VARCHAR},
+		MovieInfo_watcha=#{MovieInfo_watcha, jdbcType=VARCHAR},
+		MovieInfo_wavve=#{MovieInfo_wavve, jdbcType=VARCHAR},
+		MovieInfo_netflix=#{MovieInfo_netflix, jdbcType=VARCHAR},
+		MovieInfo_category=#{MovieInfo_category, jdbcType=VARCHAR}
 		where MovieInfo_no = #{MovieInfo_no}
 	</update>
+	
+	
+	
+	
 	
 	<delete id="delete">
 		delete MovieInfo where MovieInfo_no = #{MovieInfo_no}
