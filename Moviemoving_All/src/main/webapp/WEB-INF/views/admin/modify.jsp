@@ -73,9 +73,9 @@
 					                             <label>영화번호</label>
 					                             <input class="form-control" name="title" value="${movieList.movieInfo_category}">
 					                    </div>
-			                             <button type="submit" data-oper="modefy" class="btn btn=primary">수정</button>
-			                             <button type="submit" data-oper="remove" class="btn btn=primary">삭제</button>
-			                             <button type="submit" data-oper="list" class="btn btn=primary">목록</button>
+			                             <button type="submit" data-oper="modify" class="btn btn-primary">수정</button>
+			                             <button type="submit" data-oper="remove" class="btn btn-primary">삭제</button>
+			                             <button type="submit" data-oper="list" class="btn btn-primary">목록</button>
                                 	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                 	</form>
                                 </div>
