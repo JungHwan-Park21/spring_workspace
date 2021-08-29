@@ -20,8 +20,5 @@ public interface adminMapper {
 	public int update(MovieVO movie);
 
 	public int delete(int movieInfo_no);
-
-			
-
 			
 }

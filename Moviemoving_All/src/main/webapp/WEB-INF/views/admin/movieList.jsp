@@ -94,10 +94,12 @@
                                 			operForm.find("input[name='MovieInfo_no']").attr("value",MovieInfo_no);
                                 			
                                 			operForm.attr("action","/admin/movieRemove").submit();
-                                		})
+                                		});
                                 	});
                                 </script>
                                <!--  <!-- Modal -------------->
+                               
+                               
 								<div id="myModal" class="modal fade" role="dialog">
 								  <div class="modal-dialog">
 								    <div class="modal-content">

@@ -19,63 +19,63 @@
                                 		<form role="form" action="/admin/movieList" method="post">
                                 			<div class="form-group">
                                 				<label>code</label>
-                                				<input class="form-control" name="title">
+                                				<input class="form-control" name="movieInfo_code">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>no</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_no">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>title</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_title">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>year</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_year">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>age</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_age">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>rt</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_rt">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>visit</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_visit">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>con</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_con">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>thum</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_thum">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>bkimg</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_bkimg">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>video</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_video">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>watcha</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_watcha">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>wave</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_wave">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>netflix</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_netflix">
                                 			</div>
                                 			<div class="form-group">
                                 				<label>category</label>
-                                				<input class="form-control" name="writer">
+                                				<input class="form-control" name="movieInfo_catagory">
                                 			</div>
                                 			<button type="submit" class="btn btn-primary">등록</button>
                                 			<button type="reset" class="btn btn-primary">reset</button>

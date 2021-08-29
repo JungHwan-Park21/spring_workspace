@@ -58,19 +58,21 @@ public class adminController {
 		//admin 상세보기
 		@GetMapping({"/get","/modify"})
 		public void get(@RequestParam("MovieInfo_no")int MovieInfo_no,Model model) {
-			
-			log.info("MovieInfo_no");
+			log.info("/get or modify");
 			model.addAttribute("getList",service.get(MovieInfo_no));
 		}
 		@PostMapping("/modify")
 		public String modify(MovieVO movie, RedirectAttributes rttr) {
+			log.info("수정");
 			if(service.modify(movie)) {
 				rttr.addFlashAttribute("result","success");
 			}
+			
 			return "redirect:/admin/movieList";
 		}
 		@PostMapping("/remove")
 		public String remove(@RequestParam("MovieInfo_no")int MovieInfo_no,RedirectAttributes rttr) {
+			log.info("삭제");
 			if(service.remove(MovieInfo_no)) {
 				rttr.addFlashAttribute("result","success");
 			}

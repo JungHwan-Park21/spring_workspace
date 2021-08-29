@@ -80,6 +80,20 @@
 			                            <a href="/admin/modify?MovieInfo_no=<c:out value='${getList.movieInfo_no}'/>" class="btn btn-primary">수정</a>
 			                             
 			                           	<a href="/admin/movieList" class="btn btn-primary">목록</a>
+			                           	
+			                           	<script type="text/javascript">
+			                           	$(document).ready(funtion(){
+			                           		var operForm = $("#operForm");
+			                           		$("button[data-oper='modify']").on("click",function(e){
+			                           			operForm.attr("action","admin/modify").submit();
+			                           		});
+			                           		$("button[data-oper='list']").on("click",function(e){
+			                           			operForm.find("#bno").remove();
+			                           			operForm.attr("action","/admin/movieList")
+			                           			operForm.submit();
+			                           		});
+			                           	});
+			                           	</script>
 			                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />            
                             </div>
                         </div>
