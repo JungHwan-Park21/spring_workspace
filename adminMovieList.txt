@@ -1,0 +1,17 @@
+1.controller 
+com.Moviemoving.controller ->adminController.java
+
+2.mapper 
+com.Moviemoving.mapper ->adminMapper.java
+
+3.mapper.xml
+com.Moviemoving.mapper ->adminMapper.xml
+
+4.service
+com.Moviemoving.service ->adminService.java
+
+5.serviceImpl
+com.Moviemoving..service ->adminServiceImpl.java
+
+6.jsp
+modify(수정삭제) , movieList(리스트) , register(상세보기)
