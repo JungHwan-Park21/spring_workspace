@@ -46,7 +46,7 @@ public class MovieController {
 		return "contents";
 	}	
 	
-	//admin
+	//admin list
 	@GetMapping("/admin/movieList")
 	public void list(Model model) {
 		model.addAttribute("movieList", service.getList());
