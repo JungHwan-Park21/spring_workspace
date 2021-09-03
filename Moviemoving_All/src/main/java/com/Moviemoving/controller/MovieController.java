@@ -38,7 +38,7 @@ public class MovieController {
 		model.addAttribute("wavve", service.tvWavve());
 	}
 	
-	//영화상세
+	//영화상세 g
 	@GetMapping("/movie")
 	public String getMovie (@RequestParam("MovieInfo_no") int MovieInfo_no, CategoryListVO cateList, Model model) {
 		model.addAttribute("movie", service.read(MovieInfo_no));
